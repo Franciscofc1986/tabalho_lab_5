@@ -98,125 +98,128 @@ body{
 	font-size: 110%;
 	font-weight: bold;
 	position: absolute;
-	left: 42.5%;
+	left: 42%;
 	margin-top: 5px;
 }
 
-#informacao_empresas{
+#informacao_funcionarios{
 	margin-left: 14%;
 	margin-right: 14%;
 	margin-bottom: 1%;
 	border: 1px solid #fff;
 	border-radius: 5px;
 	background-color: #fff;
-	height: 360px;
+	height: 320px;
 }
 
 .campos{
+	margin-left: 4px;
 	margin-top: 50px;
 	color: #1e1e1e;
-	margin-left: 4px;
 }
 
-#razao_social, #ie, #logradouro, #bairro, #uf, #email{
+#admissao, #tel, #cpf, #pis, #setor, #andamento, #periculosidade{
 	margin-top: -23px;
 	margin-left: 265px;
 }
 
-#codigo{
+#empresa{
 	margin-left: 50px;
 }
 
-#cnpj, #tel, #num, #cidade, #cep{
+#nome, #sexo, #rg, #funcao, #salario, #insalubridade{
 	margin-top: 20px;
 	margin-left: 50px;
 }
 
-#razao_social input{
-	width: 535px;
+#empresa input{
+	width: 540px;
 }
 
-#cnpj input{
-	margin-left: 10px;
-	width: 350px;
+
+#admissao{
+	margin-left: 670px;
 }
 
-#ie{
-	margin-left: 470px;
+#nome input{
+	margin-left: 17px;
+	width: 580px;
 }
 
-#ie input{
-	width: 395px;
+
+#tel{
+	margin-left: 710px;
 }
 
-#tel input{
-	margin-left: 22px;
-	width: 190px;
+#sexo input{
+	width: 120px;
+	margin-left: 23px;
 }
 
-#logradouro{
-	margin-left: 310px;
-}
-
-#logradouro input{
-	width: 500px;
-}
-
-#num input{
-	width: 115px;
-	margin-left: 29px;
-}
-
-#active{
-	margin-top: -23px;
-	margin-left: 450px;
-}
-
-#bairro{
-	margin-left: 235px;
-}
-
-#bairro input{
-	width: 610px;
-}
-
-#cidade input{
-	width: 500px;
-}
-
-#uf{
-	margin-left: 630px;
-}
-
-#uf input{
-	width: 237px;
-}
-
-#cep input{
-	width: 123px;
-	margin-left: 16px;
-}
-
-#email{
+#cpf{
 	margin-left: 250px;
 }
 
-#email input{
-	width: 320px;
+#cpf input{
+	width: 180px;
 }
 
-#active{
-	margin-left: 640px;
+#rg{
+	margin-left: 490px;
+	margin-top: -21.5px;
 }
 
-#active input{
-	width: 161px;
+#rg input{
+	width: 170px;
 }
 
+#pis{
+	margin-top: -22px;
+	margin-left: 710px;
+}
 
+#funcao input{
+	margin-left: 8px;
+	width: 330px;
+}
+
+#setor{
+	margin-left: 465px;
+}
+
+#setor input{
+	width: 370px;
+}
+
+#salario input{
+	margin-left: 9px;
+	width: 80px;
+}
+
+#andamento{
+	margin-left: 208px;
+}
+
+#insalubridade{
+	margin-top: -22px;
+	margin-left: 440px;
+}
+
+#insalubridade input{
+	width: 100px;
+}
+
+#periculosidade{
+	margin-top: -22px;
+	margin-left: 650px;
+}
+
+#periculosidade input{
+	width: 125px;
+}
 .botoes{
 	margin-top: 30px;	
-	margin-left: 33%;
+	margin-left: 34%;
 }
 
 
@@ -238,29 +241,3 @@ footer{
 	font-size: 120%;
 	position: absolute;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
