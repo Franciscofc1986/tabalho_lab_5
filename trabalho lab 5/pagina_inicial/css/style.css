@@ -89,9 +89,10 @@ body{
 #nav li:hover li:hover > li a.fly
 {background:#FFF url(images/arrow.gif) 80px 6px no-repeat; color:#000; border-color:#000;} 
 
-#contacts{
-	margin-left: 600px;
+#item1{
+	margin-left: 300px;
 }
+
 
 #bemvindo{
 	color: #1e1e1e;
@@ -114,28 +115,49 @@ body{
 	height: 600px;
 }
 
+.titles{
+	color: #213186;
+	font-size: 110%;
+	font-weight: bold;
+	position: absolute;
+	left: 17%;
+	margin-top: 65px;
+}
 .escala{
   width: 25%;
   border: thin silver solid;
   margin: 0.5em;
   padding: 0.5em;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 110px;
 }
 
-
-#caixa{
+#empresa{
 	float: left;
 	margin-left: 4%;
-	margin-top: 7%;
+	margin-top: 12%;
 }
 
- #noticias p{
+#funcionario{
+	float: left;
+	margin-left: 4%;
+	margin-top: 12%;
+}
+
+ #noticias #texto1{
 	text-align: justify;
-	width: 300px;
+	width: 170px;
 	height: 50px;
-	margin-left: 100px;
-	margin-top: 63px
+	margin-left: 37px;
+	margin-top: 210px;
+}
+
+ #noticias #texto2{
+	text-align: justify;
+	width: 170px;
+	height: 50px;
+	margin-left: 37px;
+	margin-top: 200px;
 }
 footer{
 	margin-left: 14%;
