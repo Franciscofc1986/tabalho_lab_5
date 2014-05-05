@@ -117,8 +117,7 @@ body{
 	margin-top: 50px;
 	color: #1e1e1e;
 }
-
-#admissao, #tel, #cpf, #pis, #setor, #andamento, #periculosidade{
+#admissao, #tel, #cpf, #pis, #setor, #vale, #periculosidade{
 	margin-top: -23px;
 	margin-left: 265px;
 }
@@ -127,29 +126,37 @@ body{
 	margin-left: 50px;
 }
 
-#nome, #sexo, #rg, #funcao, #salario, #insalubridade{
+#sexo, #rg, #funcao, #salario, #insalubridade{
+	margin-top: 20px;
+	margin-left: 50px;
+}
+#nome{
 	margin-top: 20px;
 	margin-left: 50px;
 }
 
-#empresa input{
-	width: 540px;
-}
-
-
-#admissao{
-	margin-left: 670px;
-}
-
 #nome input{
 	margin-left: 17px;
-	width: 580px;
+	width: 460px;
+}
+
+#admissao{
+	margin-left: 595px;
+}
+
+#admissao input{
+	width: 80px;
 }
 
 
 #tel{
-	margin-left: 710px;
+	margin-left: 765px;
 }
+
+#tel input{
+	width: 80px;
+}
+
 
 #sexo input{
 	width: 120px;
@@ -196,8 +203,12 @@ body{
 	width: 80px;
 }
 
-#andamento{
+#vale{
 	margin-left: 208px;
+}
+
+#vale input{
+	width: 100px;
 }
 
 #insalubridade{
@@ -217,6 +228,7 @@ body{
 #periculosidade input{
 	width: 125px;
 }
+
 .botoes{
 	margin-top: 30px;	
 	margin-left: 34%;

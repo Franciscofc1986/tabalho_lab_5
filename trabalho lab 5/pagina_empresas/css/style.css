@@ -98,7 +98,7 @@ body{
 	font-size: 110%;
 	font-weight: bold;
 	position: absolute;
-	left: 42.5%;
+	left: 46%;
 	margin-top: 5px;
 }
 
@@ -109,7 +109,7 @@ body{
 	border: 1px solid #fff;
 	border-radius: 5px;
 	background-color: #fff;
-	height: 360px;
+	height: 400px;
 }
 
 .campos{
@@ -123,11 +123,21 @@ body{
 	margin-left: 265px;
 }
 
+#nome input{
+	width: 738px;
+}
+
 #codigo{
+	margin-top: 19px;
 	margin-left: 50px;
 }
 
-#cnpj, #tel, #num, #cidade, #cep{
+#codigo input{
+	width: 90px;
+	margin-left: 49px;
+}
+
+#nome, #cnpj, #tel, #num, #cidade, #cep{
 	margin-top: 20px;
 	margin-left: 50px;
 }
@@ -137,8 +147,8 @@ body{
 }
 
 #cnpj input{
-	margin-left: 10px;
-	width: 350px;
+	margin-left: 59px;
+	width: 300px;
 }
 
 #ie{
@@ -150,8 +160,8 @@ body{
 }
 
 #tel input{
-	margin-left: 22px;
-	width: 190px;
+	margin-left: 72px;
+	width: 1305x;
 }
 
 #logradouro{
@@ -163,13 +173,8 @@ body{
 }
 
 #num input{
-	width: 115px;
-	margin-left: 29px;
-}
-
-#active{
-	margin-top: -23px;
-	margin-left: 450px;
+	width: 70px;
+	margin-left: 79px;
 }
 
 #bairro{
@@ -181,7 +186,8 @@ body{
 }
 
 #cidade input{
-	width: 500px;
+	margin-left: 49px;
+	width: 450px;
 }
 
 #uf{
@@ -193,8 +199,8 @@ body{
 }
 
 #cep input{
-	width: 123px;
-	margin-left: 16px;
+	width: 85px;
+	margin-left: 65px;
 }
 
 #email{
@@ -202,21 +208,12 @@ body{
 }
 
 #email input{
-	width: 320px;
+	width: 599px;
 }
-
-#active{
-	margin-left: 640px;
-}
-
-#active input{
-	width: 161px;
-}
-
 
 .botoes{
 	margin-top: 30px;	
-	margin-left: 33%;
+	margin-left: 42%;
 }
 
 
