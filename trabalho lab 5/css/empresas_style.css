@@ -1,0 +1,180 @@
+
+body{
+	background: url(images/bg.png);
+	background-repeat: repeat;
+	font-family: "Times New Roman", 'serif';
+
+}
+
+#item1{
+	margin-left: 300px;
+}
+
+#titles{
+	color: #213186;
+	font-size: 110%;
+	font-weight: bold;
+	position: absolute;
+	left: 46%;
+	margin-top: 5px;
+}
+
+#informacao_empresas{
+	margin-left: 14%;
+	margin-right: 14%;
+	margin-bottom: 1%;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background-color: #fff;
+	height: 400px;
+}
+
+.campos{
+	margin-top: 50px;
+	color: #1e1e1e;
+	margin-left: 4px;
+}
+
+#razao_social, #ie, #logradouro, #bairro, #uf, #email{
+	margin-top: -23px;
+	margin-left: 265px;
+}
+
+#nome input{
+	width: 738px;
+}
+
+#codigo{
+	margin-top: 19px;
+	margin-left: 50px;
+}
+
+#codigo input{
+	width: 90px;
+	margin-left: 49px;
+}
+
+#nome, #cnpj, #tel, #num, #cidade, #cep{
+	margin-top: 20px;
+	margin-left: 50px;
+}
+
+#razao_social input{
+	width: 535px;
+}
+
+#cnpj input{
+	margin-left: 59px;
+	width: 300px;
+}
+
+#ie{
+	margin-left: 470px;
+}
+
+#ie input{
+	width: 395px;
+}
+
+#tel input{
+	margin-left: 72px;
+	width: 1305x;
+}
+
+#logradouro{
+	margin-left: 310px;
+}
+
+#logradouro input{
+	width: 500px;
+}
+
+#num input{
+	width: 70px;
+	margin-left: 79px;
+}
+
+#bairro{
+	margin-left: 235px;
+}
+
+#bairro input{
+	width: 610px;
+}
+
+#cidade input{
+	margin-left: 49px;
+	width: 450px;
+}
+
+#uf{
+	margin-left: 630px;
+}
+
+#uf input{
+	width: 237px;
+}
+
+#cep input{
+	width: 85px;
+	margin-left: 65px;
+}
+
+#email{
+	margin-left: 250px;
+}
+
+#email input{
+	width: 599px;
+}
+
+.botoes{
+	margin-top: 30px;	
+	margin-left: 42%;
+}
+
+
+footer{
+	margin-left: 14%;
+	margin-right: 14%;
+	margin-bottom: 2%;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background-color: #fff;
+	height: 150px;
+}
+
+#links{
+	margin-top: 1%;
+	margin-left: 2%;
+	float: left;
+	color: #1e1e1e;
+	font-size: 120%;
+	position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

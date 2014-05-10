@@ -12,21 +12,21 @@ body{
 	background: url(images/bg.png);
 	background-repeat: repeat;
 	font-family: "Times New Roman", 'serif';
+	position: relative;
 
 }
 
 #banner{
 	background: url(images/banner.png);
 	position: absolute;
-	 top: 0px;
-	 left: 1.5px;
-	 right: 0px;
-	 width: 100%;
+	 top: -8px;
+	margin-left: -7px;
+	 width: 106%;
  	height: 200px;
  	background-repeat: no-repeat;
 }
 #barra{
-	margin-top: 11.8%;
+	margin-top: 11.2%;
 }
 .preload1 {background: url(images/six_0a.gif);}
 .preload2 {background: url(images/six_1a.gif);}
@@ -89,134 +89,76 @@ body{
 #nav li:hover li:hover > li a.fly
 {background:#FFF url(images/arrow.gif) 80px 6px no-repeat; color:#000; border-color:#000;} 
 
+
 #item1{
 	margin-left: 300px;
 }
 
-#titles{
+
+#bemvindo{
+	color: #1e1e1e;
+	font-size: 120%;
+	position: absolute;
+	 left: 600px;
+	 right: 0px;
+	 width: 100%;
+ 	height: 200px;
+}
+
+#noticias{
+	margin-left: 14%;
+	margin-right: 14%;
+	margin-bottom: 1%;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background-color: #fff;
+	height: 600px;
+}
+
+.titles{
 	color: #213186;
 	font-size: 110%;
 	font-weight: bold;
 	position: absolute;
-	left: 43.5%;
-	margin-top: 5px;
+	left: 17%;
+	margin-top: 65px;
 }
-
-#informacao_folha{
-	margin-left: 14%;
-	margin-right: 14%;
-	margin-bottom: 1%;
-	margin-top: 20px;
-	border: 1px solid #fff;
-	border-radius: 5px;
-	background-color: #fff;
-	height: 270px;
-}
-
-.campos{
-	margin-left: 4px;
-	margin-top: 50px;
-	color: #1e1e1e;
-}
-#funcionario, #fds, #hora_extra_fds, #falta_fds, #dependentes{
-	margin-top: -23px;
-	margin-left: 265px;
+.escala{
+  width: 25%;
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
+  width: 150px;
+  height: 110px;
 }
 
 #empresa{
-	margin-left: 50px;
-}
-
-#competencia, #dias_uteis, #hora_extra_normal, #falta_normal, #add_noturno, #adiantamento{
-	margin-top: 20px;
-	margin-left: 50px;
-}
-
-#competencia input{
-	margin-left: 29px;
-	width: 170px;
+	float: left;
+	margin-left: 4%;
+	margin-top: 12%;
 }
 
 #funcionario{
-	margin-left: 360px;
+	float: left;
+	margin-left: 4%;
+	margin-top: 12%;
 }
 
-#funcionario input{
-	width: 440px;
+ #noticias #texto1{
+	text-align: justify;
+	width: 170px;
+	height: 50px;
+	margin-left: 37px;
+	margin-top: 210px;
 }
 
-#dias_uteis input{
-	width: 30px;
+ #noticias #texto2{
+	text-align: justify;
+	width: 170px;
+	height: 50px;
+	margin-left: 37px;
+	margin-top: 200px;
 }
-
-#fds{
-	margin-left: 220px;
-}
-
-#fds input{
-	width: 30px;
-}
-
-#hora_extra_normal, #hora_extra_fds{
-	margin-top: -22px;
-}
-
-#hora_extra_normal{
-	margin-left: 400px;
-}
-
-#hora_extra_normal input{
-	width: 110px;
-}
-
-#hora_extra_fds{
-	margin-left: 654px;
-}
-
-#hora_extra_fds input{
-	width: 110px
-}
-
-#falta_normal input{
-	width: 58px;
-	margin-left: 32px
-}
-
-#falta_fds{
-	margin-left: 240px;
-}
-
-#falta_fds input{
-	width: 80px;
-}
-
-#add_noturno{
-	margin-top: -23px;
-	margin-left: 410px;
-}
-
-#add_noturno input{
-	width: 100px;
-}
-
-#dependentes{
-	margin-left: 654px;
-}
-
-#dependentes input{
-	width: 100px;
-}
-
-#adiantamento input{
-	width: 58px;
-	margin-left: 23px;
-}
-.botoes{
-	margin-top: 30px;	
-	margin-left: 41%;
-}
-
-
 footer{
 	margin-left: 14%;
 	margin-right: 14%;
@@ -235,3 +177,6 @@ footer{
 	font-size: 120%;
 	position: absolute;
 }
+
+
+
