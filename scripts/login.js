@@ -1,8 +1,24 @@
-// var nome= só teste;
-//Comitado pelo tião em 05/05/2014
+var form=document.formulario;
+var nome='';
+var senha='';
 function validar(){
-	// alert("bem vindo" +nome+"!")
-	// window.close('this');
-	window.open('pagina_inicial/pagina_inicial.html','_parent');
-	// document.location="pagina_inicial/pagina_inicial.html";
+	nome=form.nome.value;
+	senha=form.senha_user.value;
+	if(nome=="admin"&&senha=="admin"){
+		alert("bem vindo " +nome+"!")
+		window.open('pagina_inicial/pagina_inicial.html','_blank');
+		window.close('this');
+
+		//window.open('frame/frame_principal.html','_parent');
+	}
+	else{
+		if(nome!="admin")
+		{
+			alert("usuário "+nome+" não autorizado!")
+		}
+		else
+		{
+			alert("senha não confere")
+		}
+	}
 }

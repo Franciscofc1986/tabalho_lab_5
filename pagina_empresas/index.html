@@ -46,71 +46,71 @@
 		<a href="javascript:void();" onclick="login()" id ="item7" class="top_link"><span>Logout</span></a>
 	</li>
 	</div>
-
 	<div id="informacao_empresas">
 		<label id="titles">Emitente</label>
 	<div class="campos">
 	<div id = "nome">
 		<label class="inputs">Nome Fantasia:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_nome_fantasia" required="required" />
 	</div>
 	<div id = "codigo">
 		<label class="inputs">Código:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_codigo" required="required" />
 	</div>
 	<div id = "razao_social">
 		<label class="inputs">Razão Social:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_razao_social" required="required" />
 	</div>
 	<div id = "cnpj">
 		<label class="inputs">CNPJ:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_cnpj" required="required" />
 	</div>
 	<div id = "ie">
 		<label class="inputs">I.E:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_ie" required="required" />
 	</div>
 	<div id = "tel">
 		<label class="inputs">Tel.:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_telefone" required="required" />
 	</div>
 	<div id = "logradouro">
 		<label class="inputs">Logradouro:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_logradouro" required="required" />
 	</div>
 	<div id = "num">
 		<label class="inputs">Nº:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_num" required="required" />
 	</div>
 	<div id = "bairro">
 		<label class="inputs">Bairro:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_bairro" required="required" />
 	</div>
 	<div id = "cidade">
 		<label class="inputs">Cidade:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_cidade" required="required" />
 	</div>
 	<div id = "uf">
 		<label class="inputs">UF:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_uf" required="required" />
 	</div>
 	<div id = "cep">
 		<label class="inputs">CEP:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_cep" required="required" />
 	</div>
 	<div id = "email">
 		<label class="inputs">Email:</label>
-			<input type="email" required="required" />
+			<input type="email" id="campo_email" required="required" />
 	</div>
 
 	<div class="botoes">
-		<input type="submit" value="Incluir" />
+		<input type="submit" value="Incluir" onclick="inserir_registro()" />
 		<input type="submit" value="Alterar" />
 	</div>
 	</div>
 	</div>
-
-	<script src="js/script.js"></script>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 <footer>

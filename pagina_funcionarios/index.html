@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>PayRoll - Funcionários</title>
 	<link rel="stylesheet" href="css/style.css">
+	
 </head>
 <body>
 <div id="banner" />
@@ -51,67 +52,67 @@
 	<div class="campos">
 	<div id = "nome">
 		<label class="inputs">Nome:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_nome" required="required" />
 	</div>
 	<div id = "admissao">
 		<label class="inputs">Admissão:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_admissao" required="required" />
 	</div>		
 	<div id = "tel">
 		<label class="inputs">Tel.:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_telefone" required="required" />
 	</div>
 	<div id = "sexo">
 		<label class="inputs">Sexo: </label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_sexo" required="required" />
 	</div>
 	<div id = "cpf">
 		<label class="inputs">CPF:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_cpf" required="required" />
 	</div>
 	<div id = "rg">
 		<label class="inputs">RG:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_rg" required="required" />
 	</div>
 	<div id = "pis">
 		<label class="inputs">PIS:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_pis" required="required" />
 	</div>
 	<div id = "funcao">
 		<label class="inputs">Função:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_funcao" required="required" />
 	</div>
 	<div id = "setor">
 		<label class="inputs">Setor:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_setor" required="required" />
 	</div>
 	<div id = "salario">
 		<label class="inputs">Salário:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_salario" required="required" />
 	</div>
 	<div id = "vale">
 		<label class="inputs">Vale-Transporte:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_vale_transporte" required="required" />
 	</div>
 	<div id = "insalubridade">
 		<label class="inputs">Insalubridade:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_insalubridade" required="required" />
 	</div>
 	<div id = "periculosidade">
 		<label class="inputs">Periculosidade:</label>
-			<input type="text" required="required" />
+			<input type="text" id="campo_periculosidade" required="required" />
 	</div>
 	</div>
 	
 	<div class="botoes">
-		<input type="submit" value="Incluir" />
+		<input type="submit" value="Incluir" onclick="inserir_registo()"/>
 		<input type="submit" value="Alterar" />
 		<input type="submit" value="Consultar" />
 		<input type="submit" value="Demitir" />
 	</div>
 	</div>
-
-	<script src="js/script.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 <footer>

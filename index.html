@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/login_style.css">
 </head>
 <body>
-	<form class="login-form" action="" method="POST">
+	<form class="login-form" name="formulario" action="" method="POST">
 	<fieldset>
 	<div class="titulo">
 		<legend id="principal">PayRoll</legend>
@@ -16,21 +16,20 @@
 	<div class="first-column">
 	<label>
 		Login:
-		<input id="nome" type="text" required="required"/>
+		<input id="nome" type="text" name="nome_user"required="required"/>
 	</label>
 
 	<label>
 		Senha:
-		<input type="password" required="required" />
+		<input type="password" name="senha_user" required="required" />
 	</label>
-	<input type="submit" value="OK" onclick="validar()" />
+	<input type="submit" value="OK" onclick="return validar()"/>
 		</div>
-
-    </fieldset>
+	</fieldset>
     </form>
     <footer>
     	Copyright © 2014 - FNS Developers
     </footer>
-    <script src="scripts\login.js"></script>
+    <script src="scripts/login.js"></script>
 </body>
 </html>
