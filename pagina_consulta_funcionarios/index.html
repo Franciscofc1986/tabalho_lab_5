@@ -3,8 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PayRoll - Folha</title>
+	<title>PayRoll - Consultando Funcionários</title>
 	<link rel="stylesheet" href="css/style.css">
+	
 </head>
 <body>
 <div id="banner" />
@@ -48,63 +49,23 @@
 		<a href="javascript:void();" onclick="login()" id ="item7" class="top_link"><span>Logout</span></a>
 	</li>
 	</div>
-
-	<div id="informacao_folha">
-		<label id="titles">Folha de Pagamento</label>
-	<div class="campos">
-	<div id = "competencia">
-		<label class="inputs">Competência:</label>
-			<input type="text" required="required" />
+	<div id="informacao_funcionarios">
+	<label id="titles">Lista de Funcionários</label>
+	<div id="procurar">
+	<input type="text" name="txtnome" id="txtnome">
+	<input type="submit" value="Procurar" onclick="getDados()">
+	<p><label>*Para exibir todos os funcionários, clique em "Procurar" com o campo vazio.</label></p>
 	</div>
-	<div id = "funcionario">
-		<label class="inputs">Funcionário:</label>
-			<input type="text" required="required" />
-	</div>		
-	<div id = "dias_uteis">
-		<label class="inputs">Dias úteis do mês:</label>
-			<input type="text" required="required" />
+	<div id="tabela">
+	
 	</div>
-	<div id = "fds">
-		<label class="inputs">Dias F.D.S. do mês:</label>
-			<input type="text" required="required" />
+	<div id="botoes">
+	<input type="submit" value="Editar">
+	<input type="submit" value="Deletar">
 	</div>
-	<div id = "hora_extra_normal">
-		<label class="inputs">Hora extra normal:</label>
-			<input type="text" required="required" />
-	</div>
-	<div id = "hora_extra_fds">
-		<label class="inputs">Hora extra F.D.S.:</label>
-			<input type="text" required="required" />
-	</div>
-	<div id = "falta_normal">
-		<label class="inputs">Falta normal:</label>
-			<input type="text" required="required" />
-	</div>
-	<div id = "falta_fds">
-		<label class="inputs">Falta FDS:</label>
-			<input type="text" required="required" />
-	</div>
-	<div id = "add_noturno">
-		<label class="inputs">Adicional Noturno:</label>
-			<input type="text" required="required" />
-	</div>
-	<div id = "dependentes">
-		<label class="inputs">Nº de Dependentes:</label>
-			<input type="text" required="required" />
-	</div>
-	<div id = "adiantamento">
-		<label class="inputs">Adiantamento:</label>
-			<input type="text" required="required" />
-	</div>
-
-	<div class="botoes">
-		<input type="submit" value="Gerar" />
-		<input type="submit" value="Consultar" />
-	</div>
-	</div>
-</div>
-
-	<script src="js/script.js"></script>
+   </div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 <footer>

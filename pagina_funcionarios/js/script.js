@@ -4,8 +4,14 @@ function pagina_principal(){
 function empresas(){
 	window.location = '../pagina_empresas/index.html';
 }
+function buscar_emitentes(){
+    window.location = '../pagina_consulta_emitente/index.html';
+}
 function funcionarios(){
 	window.location = '../pagina_funcionarios/index.html';
+}
+function buscar_funcionarios(){
+  window.location = '../pagina_consulta_funcionarios/index.html';
 }
 function folha(){
 	window.location = '../pagina_folha/index.html';
