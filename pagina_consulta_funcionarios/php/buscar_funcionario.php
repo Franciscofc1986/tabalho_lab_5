@@ -23,7 +23,7 @@ $result = mysqli_query($conexao,$sql);
     // Verifica se a consulta retornou linhas 
     if ($cont > 0) {
         // Atribui o código HTML para montar uma tabela
-        $tabela = "<table border='1'>
+        $tabela = "<table class='tabelaEditavel' border='1'>
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -39,11 +39,14 @@ $result = mysqli_query($conexao,$sql);
                             <th>Vale-Transporte</th>
                             <th>Insalubridade</th>
                             <th>Periculosidade</th>
+                            <th>E/D</th>
                         </tr>
                     </thead>
                     <tbody>
                     <tr>";
         $return = "$tabela";
+        $textbox = "<input type='checkbox' name='marcar' onClick='valida_checkbox()' />";
+
         // Captura os dados da consulta e inseri na tabela HTML
         while ($linha = mysqli_fetch_array($result)) {
             $return.= "<td>" . utf8_encode($linha["nome"]) . "</td>";
@@ -59,6 +62,7 @@ $result = mysqli_query($conexao,$sql);
             $return.= "<td>" . utf8_encode($linha["vale_transporte"]) . "</td>";
             $return.= "<td>" . utf8_encode($linha["insalubridade"]) . "</td>";
             $return.= "<td>" . utf8_encode($linha["periculosidade"]) . "</td>";
+            $return.= "<td>" . ($textbox) . "</td>";
             $return.= "</tr>";
         }
         echo $return.="</tbody></table>";

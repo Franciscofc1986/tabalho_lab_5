@@ -84,11 +84,11 @@ function login(){
      xmlreq.send(null);
  }
 
-/*
 
-Transformar Table em editável
-
- $(function () {
+function valida_checkbox() {
+    if (jQuery("input[name='marcar']:checked")) {
+        
+        $(function () {
     $("td").dblclick(function () {
         var conteudoOriginal = $(this).text();
         
@@ -103,12 +103,15 @@ Transformar Table em editável
                 $(this).parent().removeClass("celulaEmEdicao");
             }
         });
-		
-	$(this).children().first().blur(function(){
-		$(this).parent().text(conteudoOriginal);
-		$(this).parent().removeClass("celulaEmEdicao");
-	});
+        
+    $(this).children().first().blur(function(){
+        $(this).parent().text(conteudoOriginal);
+        $(this).parent().removeClass("celulaEmEdicao");
     });
-});
-
-*/
+    });
+});        
+    } else {
+        alert("Marque pelo menos um equipamento!");
+        return false;
+    }
+}
