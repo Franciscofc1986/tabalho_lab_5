@@ -67,13 +67,13 @@ function login(){
      // Iniciar uma requisição
      xmlreq.open("GET", "php/buscar_emitente.php?txtnome=" + nome, true);
 
+    
      // Atribui uma função para ser executada sempre que houver uma mudança de ado
      xmlreq.onreadystatechange = function(){
          
          // Verifica se foi concluído com sucesso e a conexão fechada (readyState=4)
-         if (xmlreq.readyState == 4) {
-             
-             // Verifica se o arquivo foi encontrado com sucesso
+         if (xmlreq.readyState == 4) {     
+                 // Verifica se o arquivo foi encontrado com sucesso
              if (xmlreq.status == 200) {
                  result.innerHTML = xmlreq.responseText;
              }else{
@@ -83,6 +83,10 @@ function login(){
      };
      xmlreq.send(null);
  }
+
+  /*$(document).ready(function(){
+             $("table thead tr th:not(.sub)").hide();
+                }); */
 
 function valida_checkbox() {
     if (jQuery("input[name='marcar']:checked")) {
@@ -110,7 +114,111 @@ function valida_checkbox() {
     });
 });        
     } else {
-        alert("Marque pelo menos um equipamento!");
+        alert("Marque pelo menos um registro!");
         return false;
     }
+}
+
+function editar_registro(){
+ 
+    //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
+    var dadosajax = {
+      
+          'id' : $("#campo_id").text(),
+          'nome_fantasia' : $("#campo_nome_fantasia").text(),     
+          'codigo' : $("#campo_codigo").text(),
+          'razao_social' : $("#campo_razao_social").text(),
+          'cnpj' : $("#campo_cnpj").text(),
+          'ie' : $("#campo_ie").text(),        
+          'tel' : $("#campo_telefone").text(),         
+          'logradouro' : $("#campo_logradouro").text(),
+          'num' : $("#campo_num").text(),
+          'bairro' : $("#campo_bairro").text(),
+          'cidade' : $("#campo_cidade").text(),
+          'uf' : $("#campo_uf").text(),
+          'cep'   : $("#campo_cep").text(),
+          'email'  : $("#campo_email").text(),
+    };
+    pageurl = 'php/editar_emitente.php';
+    //para consultar mais opcoes possiveis numa chamada ajax
+    //http://api.jquery.com/jQuery.ajax/
+    $.ajax({
+ 
+        //url da pagina
+        url: pageurl,
+        //parametros a passar
+        data: dadosajax,
+        //tipo: POST ou GET
+        type: 'POST',
+        //cache
+        cache: false,
+        //se ocorrer um erro na chamada ajax, retorna este alerta
+        //possiveis erros: pagina nao existe, erro de codigo na pagina, falha de comunicacao/internet, etc etc etc
+        error: function(){
+            alert('Erro: Atualizar Registo!!');
+        },
+        //retorna o resultado da pagina para onde enviamos os dados
+        success: function(result)
+        { 
+            //se foi inserido com sucesso
+            if($.trim(result) != '1')
+            {
+               alert("Emitente atualizado com sucesso!");
+             
+            }
+            //se foi um erro
+            else
+            {
+             alert("Não foi possível atualizar o Emitente!");
+           
+            }
+ 
+        }
+    });
+}
+
+function deletar_registro(){
+ 
+    //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
+    var dadosajax = {
+      
+          'id' : $("#campo_id").text(),
+    };
+    pageurl = 'php/deletar_emitente.php';
+    //para consultar mais opcoes possiveis numa chamada ajax
+    //http://api.jquery.com/jQuery.ajax/
+    $.ajax({
+ 
+        //url da pagina
+        url: pageurl,
+        //parametros a passar
+        data: dadosajax,
+        //tipo: POST ou GET
+        type: 'POST',
+        //cache
+        cache: false,
+        //se ocorrer um erro na chamada ajax, retorna este alerta
+        //possiveis erros: pagina nao existe, erro de codigo na pagina, falha de comunicacao/internet, etc etc etc
+        error: function(){
+            alert('Erro: Deletar Registo!!');
+        },
+        //retorna o resultado da pagina para onde enviamos os dados
+        success: function(result)
+        { 
+            //se foi inserido com sucesso
+            if($.trim(result) != '1')
+            {
+               alert("Emitente deletado com sucesso!");
+               getDados();
+             
+            }
+            //se foi um erro
+            else
+            {
+             alert("Não foi possível deletar o Emitente!");
+           
+            }
+ 
+        }
+    });
 }

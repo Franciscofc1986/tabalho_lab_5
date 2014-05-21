@@ -26,6 +26,7 @@ $result = mysqli_query($conexao,$sql);
         $tabela = "<table class='tabelaEditavel' border='1'>
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Nome</th>
                             <th>Admissao</th>
                             <th>Telefone</th>
@@ -49,19 +50,20 @@ $result = mysqli_query($conexao,$sql);
 
         // Captura os dados da consulta e inseri na tabela HTML
         while ($linha = mysqli_fetch_array($result)) {
-            $return.= "<td>" . utf8_encode($linha["nome"]) . "</td>";
-            $return.= "<td>" . utf8_encode($linha["admissao"]) . "</td>";
-            $return.= "<td>" . utf8_encode($linha["telefone"]) . "</td>";
-            $return.= "<td>" . utf8_encode($linha["sexo"]) . "</td>";
-            $return.= "<td>" . utf8_encode($linha["cpf"]) . "</td>";
-            $return.= "<td>" . utf8_encode($linha["rg"]) . "</td>";
-            $return.= "<td>" . utf8_encode($linha["pis"]) . "</td>";
-            $return.= "<td>" . utf8_encode($linha["funcao"]) . "</td>";
-            $return.= "<td>" . utf8_encode($linha["setor"]) . "</td>";
-            $return.= "<td>" . utf8_encode($linha["salario"]) . "</td>";
-            $return.= "<td>" . utf8_encode($linha["vale_transporte"]) . "</td>";
-            $return.= "<td>" . utf8_encode($linha["insalubridade"]) . "</td>";
-            $return.= "<td>" . utf8_encode($linha["periculosidade"]) . "</td>";
+            $return.= "<td id='campo_id'>" . utf8_encode($linha["id"]) . "</td>";
+            $return.= "<td id='campo_nome'>" . utf8_encode($linha["nome"]) . "</td>";
+            $return.= "<td id='campo_admissao'>" . utf8_encode($linha["admissao"]) . "</td>";
+            $return.= "<td id='campo_telefone'>" . utf8_encode($linha["telefone"]) . "</td>";
+            $return.= "<td id='campo_sexo'>" . utf8_encode($linha["sexo"]) . "</td>";
+            $return.= "<td id='campo_cpf'>" . utf8_encode($linha["cpf"]) . "</td>";
+            $return.= "<td id='campo_rg'>" . utf8_encode($linha["rg"]) . "</td>";
+            $return.= "<td id='campo_pis'>" . utf8_encode($linha["pis"]) . "</td>";
+            $return.= "<td id='campo_funcao'>" . utf8_encode($linha["funcao"]) . "</td>";
+            $return.= "<td id='campo_setor'>" . utf8_encode($linha["setor"]) . "</td>";
+            $return.= "<td id='campo_salario'>" . utf8_encode($linha["salario"]) . "</td>";
+            $return.= "<td id='campo_vale_transporte'>" . utf8_encode($linha["vale_transporte"]) . "</td>";
+            $return.= "<td id='campo_insalubridade'>" . utf8_encode($linha["insalubridade"]) . "</td>";
+            $return.= "<td id='campo_periculosidade'>" . utf8_encode($linha["periculosidade"]) . "</td>";
             $return.= "<td>" . ($textbox) . "</td>";
             $return.= "</tr>";
         }

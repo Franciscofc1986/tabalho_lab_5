@@ -108,15 +108,3 @@ function inserir_registro(){
         }
     });
 }
-
-/*
-<a href="javascript:void();" onclick="login()" id ="item7" class="top_link"><span class="down">Logout</span></a>
-			<ul class="sub">
-			<li><a href="javascript:void();" onclick="fechar()">Fechar</a></li>	
-
-
-function fechar(){
-	if(confirm('Você tem certeza que quer fechar a janela?'))
-		window.close('_parent');
-	//else (alert('OK, esta janela não será fechada ainda.'))
-}*/

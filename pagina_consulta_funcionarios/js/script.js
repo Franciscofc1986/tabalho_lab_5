@@ -115,3 +115,107 @@ function valida_checkbox() {
         return false;
     }
 }
+
+function editar_registro(){
+ 
+    //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
+    var dadosajax = {
+      
+          'id' : $("#campo_id").text(),
+          'nome' : $("#campo_nome").text(),     
+          'admissao' : $("#campo_admissao").text(),
+          'telefone' : $("#campo_telefone").text(),
+          'sexo' : $("#campo_sexo").text(),
+          'cpf' : $("#campo_cpf").text(),        
+          'rg' : $("#campo_rg").text(), 
+          'pis' : $("#campo_pis").text(),         
+          'funcao' : $("#campo_funcao").text(),
+          'setor' : $("#campo_setor").text(),
+          'salario' : $("#campo_salario").text(),
+          'vale_transporte' : $("#campo_vale_transporte").text(),
+          'insalubridade' : $("#campo_insalubridade").text(),
+          'periculosidade'   : $("#campo_periculosidade").text(),
+    };
+    pageurl = 'php/editar_funcionario.php';
+    //para consultar mais opcoes possiveis numa chamada ajax
+    //http://api.jquery.com/jQuery.ajax/
+    $.ajax({
+ 
+        //url da pagina
+        url: pageurl,
+        //parametros a passar
+        data: dadosajax,
+        //tipo: POST ou GET
+        type: 'POST',
+        //cache
+        cache: false,
+        //se ocorrer um erro na chamada ajax, retorna este alerta
+        //possiveis erros: pagina nao existe, erro de codigo na pagina, falha de comunicacao/internet, etc etc etc
+        error: function(){
+            alert('Erro: Atualizar Registo!!');
+        },
+        //retorna o resultado da pagina para onde enviamos os dados
+        success: function(result)
+        { 
+            //se foi inserido com sucesso
+            if($.trim(result) != '1')
+            {
+               alert("Funcionario atualizado com sucesso!");
+             
+            }
+            //se foi um erro
+            else
+            {
+             alert("Não foi possível atualizar o Funcionario!");
+           
+            }
+ 
+        }
+    });
+}
+
+function deletar_registro(){
+ 
+    //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
+    var dadosajax = {
+      
+          'id' : $("#campo_id").text(),
+    };
+    pageurl = 'php/deletar_funcionario.php';
+    //para consultar mais opcoes possiveis numa chamada ajax
+    //http://api.jquery.com/jQuery.ajax/
+    $.ajax({
+ 
+        //url da pagina
+        url: pageurl,
+        //parametros a passar
+        data: dadosajax,
+        //tipo: POST ou GET
+        type: 'POST',
+        //cache
+        cache: false,
+        //se ocorrer um erro na chamada ajax, retorna este alerta
+        //possiveis erros: pagina nao existe, erro de codigo na pagina, falha de comunicacao/internet, etc etc etc
+        error: function(){
+            alert('Erro: Deletar Registo!!');
+        },
+        //retorna o resultado da pagina para onde enviamos os dados
+        success: function(result)
+        { 
+            //se foi inserido com sucesso
+            if($.trim(result) != '1')
+            {
+               alert("Funcionario deletado com sucesso!");
+               getDados();
+             
+            }
+            //se foi um erro
+            else
+            {
+             alert("Não foi possível deletar o Funcionario!");
+           
+            }
+ 
+        }
+    });
+}
