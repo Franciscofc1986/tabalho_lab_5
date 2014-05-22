@@ -54,57 +54,58 @@
 	<div class="campos">
 	<div id = "competencia">
 		<label class="inputs">Competência:</label>
-			<input type="text" required="required" />
+			<input type="text" id = "campo_competencia" required="required" />
 	</div>
 	<div id = "funcionario">
 		<label class="inputs">Funcionário:</label>
-			<input type="text" required="required" />
+			<input type="text" id = "campo_funcionario" required="required" />
 	</div>		
 	<div id = "dias_uteis">
 		<label class="inputs">Dias úteis do mês:</label>
-			<input type="text" required="required" />
+			<input type="text" id = "campo_dias_uteis" required="required" />
 	</div>
 	<div id = "fds">
 		<label class="inputs">Dias F.D.S. do mês:</label>
-			<input type="text" required="required" />
+			<input type="text" id = "campo_fds" required="required" />
 	</div>
 	<div id = "hora_extra_normal">
 		<label class="inputs">Hora extra normal:</label>
-			<input type="text" required="required" />
+			<input type="text" id = "campo_hora_extra_normal" required="required" />
 	</div>
 	<div id = "hora_extra_fds">
 		<label class="inputs">Hora extra F.D.S.:</label>
-			<input type="text" required="required" />
+			<input type="text" id = "campo_hora_extra_fds" required="required" />
 	</div>
 	<div id = "falta_normal">
 		<label class="inputs">Falta normal:</label>
-			<input type="text" required="required" />
+			<input type="text" id = "campo_falta_normal" required="required" />
 	</div>
 	<div id = "falta_fds">
 		<label class="inputs">Falta FDS:</label>
-			<input type="text" required="required" />
+			<input type="text" id = "campo_falta_fds" required="required" />
 	</div>
 	<div id = "add_noturno">
 		<label class="inputs">Adicional Noturno:</label>
-			<input type="text" required="required" />
+			<input type="text" id = "campo_add_noturno" required="required" />
 	</div>
 	<div id = "dependentes">
 		<label class="inputs">Nº de Dependentes:</label>
-			<input type="text" required="required" />
+			<input type="text" id = "campo_dependentes" required="required" />
 	</div>
 	<div id = "adiantamento">
 		<label class="inputs">Adiantamento:</label>
-			<input type="text" required="required" />
+			<input type="text" id = "campo_adiantamento" required="required" />
 	</div>
 
 	<div class="botoes">
-		<input type="submit" value="Gerar" />
+		<input type="submit" value="Gerar" onClick="gerar_folha()"/>
 		<input type="submit" value="Consultar" />
 	</div>
 	</div>
 </div>
 
-	<script src="js/script.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 <footer>
