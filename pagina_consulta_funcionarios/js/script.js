@@ -86,8 +86,32 @@ function login(){
 
 
 function valida_checkbox() {
-    if (jQuery("input[name='marcar']:checked")) {
-        
+ $("input[name='marcar']").click(function() {
+        toogle_class( $( this ).attr('checked'), $( this ).parents('tr') );
+    });
+    $("#tabelaEditavel tr").click(function( e ){
+    if( e.target.tagName!='input' )
+    {
+        var checkbox = $( this ).find("input[type='checkbox']");
+        var ckd = checkbox.attr('checked');
+ 
+        checkbox.attr('checked', ckd);
+    toogle_class( ckd, $( this ));
+    }
+});
+}
+
+function toogle_class( ckd, el ){
+if( ckd!=true ){
+el.addClass('selecionado');
+marcar_para_editar();
+}else{
+el.removeClass('selecionado');
+}    
+}
+
+function marcar_para_editar(){
+ if (jQuery("input[name='marcar']:checked")) {
         $(function () {
     $("td").dblclick(function () {
         var conteudoOriginal = $(this).text();
@@ -110,31 +134,28 @@ function valida_checkbox() {
     });
     });
 });        
-    } else {
-        alert("Marque pelo menos um equipamento!");
-        return false;
-    }
-}
+} 
+};
 
 function editar_registro(){
  
     //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
     var dadosajax = {
       
-          'id' : $("#campo_id").text(),
-          'nome' : $("#campo_nome").text(),     
-          'admissao' : $("#campo_admissao").text(),
-          'telefone' : $("#campo_telefone").text(),
-          'sexo' : $("#campo_sexo").text(),
-          'cpf' : $("#campo_cpf").text(),        
-          'rg' : $("#campo_rg").text(), 
-          'pis' : $("#campo_pis").text(),         
-          'funcao' : $("#campo_funcao").text(),
-          'setor' : $("#campo_setor").text(),
-          'salario' : $("#campo_salario").text(),
-          'vale_transporte' : $("#campo_vale_transporte").text(),
-          'insalubridade' : $("#campo_insalubridade").text(),
-          'periculosidade'   : $("#campo_periculosidade").text(),
+          'id' : $(".selecionado #campo_id").text(),
+          'nome' : $(".selecionado #campo_nome").text(),     
+          'admissao' : $(".selecionado #campo_admissao").text(),
+          'telefone' : $(".selecionado #campo_telefone").text(),
+          'sexo' : $(".selecionado #campo_sexo").text(),
+          'cpf' : $(".selecionado #campo_cpf").text(),        
+          'rg' : $(".selecionado #campo_rg").text(), 
+          'pis' : $(".selecionado #campo_pis").text(),         
+          'funcao' : $(".selecionado #campo_funcao").text(),
+          'setor' : $(".selecionado #campo_setor").text(),
+          'salario' : $(".selecionado #campo_salario").text(),
+          'vale_transporte' : $(".selecionado #campo_vale_transporte").text(),
+          'insalubridade' : $(".selecionado #campo_insalubridade").text(),
+          'periculosidade'   : $(".selecionado #campo_periculosidade").text(),
     };
     pageurl = 'php/editar_funcionario.php';
     //para consultar mais opcoes possiveis numa chamada ajax
@@ -161,6 +182,7 @@ function editar_registro(){
             if($.trim(result) != '1')
             {
                alert("Funcionario atualizado com sucesso!");
+               getDados();
              
             }
             //se foi um erro
@@ -179,7 +201,7 @@ function deletar_registro(){
     //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
     var dadosajax = {
       
-          'id' : $("#campo_id").text(),
+          'id' : $(".selecionado #campo_id").text(),
     };
     pageurl = 'php/deletar_funcionario.php';
     //para consultar mais opcoes possiveis numa chamada ajax

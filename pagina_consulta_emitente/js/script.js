@@ -84,13 +84,34 @@ function login(){
      xmlreq.send(null);
  }
 
-  /*$(document).ready(function(){
-             $("table thead tr th:not(.sub)").hide();
-                }); */
 
 function valida_checkbox() {
-    if (jQuery("input[name='marcar']:checked")) {
-        
+ $("input[name='marcar']").click(function() {
+        toogle_class( $( this ).attr('checked'), $( this ).parents('tr') );
+    });
+    $("#tabelaEditavel tr").click(function( e ){
+    if( e.target.tagName!='input' )
+    {
+        var checkbox = $( this ).find("input[type='checkbox']");
+        var ckd = checkbox.attr('checked');
+ 
+        checkbox.attr('checked', ckd);
+    toogle_class( ckd, $( this ));
+    }
+});
+}
+
+function toogle_class( ckd, el ){
+if( ckd!=true ){
+el.addClass('selecionado');
+marcar_para_editar();
+}else{
+el.removeClass('selecionado');
+}    
+}
+
+function marcar_para_editar(){
+ if (jQuery("input[name='marcar']:checked")) {
         $(function () {
     $("td").dblclick(function () {
         var conteudoOriginal = $(this).text();
@@ -113,31 +134,29 @@ function valida_checkbox() {
     });
     });
 });        
-    } else {
-        alert("Marque pelo menos um registro!");
-        return false;
-    }
-}
+} 
+};
+
 
 function editar_registro(){
  
     //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
     var dadosajax = {
       
-          'id' : $("#campo_id").text(),
-          'nome_fantasia' : $("#campo_nome_fantasia").text(),     
-          'codigo' : $("#campo_codigo").text(),
-          'razao_social' : $("#campo_razao_social").text(),
-          'cnpj' : $("#campo_cnpj").text(),
-          'ie' : $("#campo_ie").text(),        
-          'tel' : $("#campo_telefone").text(),         
-          'logradouro' : $("#campo_logradouro").text(),
-          'num' : $("#campo_num").text(),
-          'bairro' : $("#campo_bairro").text(),
-          'cidade' : $("#campo_cidade").text(),
-          'uf' : $("#campo_uf").text(),
-          'cep'   : $("#campo_cep").text(),
-          'email'  : $("#campo_email").text(),
+          'id' : $(".selecionado #campo_id").text(),
+          'nome_fantasia' : $(".selecionado #campo_nome_fantasia").text(),     
+          'codigo' : $(".selecionado #campo_codigo").text(),
+          'razao_social' : $(".selecionado #campo_razao_social").text(),
+          'cnpj' : $(".selecionado #campo_cnpj").text(),
+          'ie' : $(".selecionado #campo_ie").text(),        
+          'tel' : $(".selecionado #campo_telefone").text(),         
+          'logradouro' : $(".selecionado #campo_logradouro").text(),
+          'num' : $(".selecionado #campo_num").text(),
+          'bairro' : $(".selecionado #campo_bairro").text(),
+          'cidade' : $(".selecionado #campo_cidade").text(),
+          'uf' : $(".selecionado #campo_uf").text(),
+          'cep'   : $(".selecionado #campo_cep").text(),
+          'email'  : $(".selecionado #campo_email").text(),
     };
     pageurl = 'php/editar_emitente.php';
     //para consultar mais opcoes possiveis numa chamada ajax
@@ -164,6 +183,7 @@ function editar_registro(){
             if($.trim(result) != '1')
             {
                alert("Emitente atualizado com sucesso!");
+               getDados();
              
             }
             //se foi um erro
@@ -182,7 +202,7 @@ function deletar_registro(){
     //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
     var dadosajax = {
       
-          'id' : $("#campo_id").text(),
+          'id' : $(".selecionado #campo_id").text(),
     };
     pageurl = 'php/deletar_emitente.php';
     //para consultar mais opcoes possiveis numa chamada ajax

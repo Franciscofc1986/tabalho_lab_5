@@ -126,6 +126,7 @@ body{
 	background-color: #fff;
 	height: 150px;
 }
+
 table{
 	border: 1px solid #000;
 	border-collapse: collapse;
@@ -143,6 +144,11 @@ th{
 td{
 	background-color: #99CCCC;
 	color: #000;
+}
+
+td:hover{
+	background-color: #99FFCC;
+
 }
 
 #botoes{

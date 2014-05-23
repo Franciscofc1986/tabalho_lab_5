@@ -23,10 +23,10 @@ $result = mysqli_query($conexao,$sql);
     // Verifica se a consulta retornou linhas 
     if ($cont > 0) {
         // Atribui o código HTML para montar uma tabela
-        $tabela = "<table class='tabelaEditavel' border='1'>
+        $tabela = "<table id='tabelaEditavel' border='1'>
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th style='display:none'>ID</th>
                             <th class='sub'>Nome Fant.</th>
                             <th class='sub'>Código</th>
                             <th class='sub'>Razão Social</th>
@@ -50,7 +50,7 @@ $result = mysqli_query($conexao,$sql);
         $return = "$tabela";
         // Captura os dados da consulta e inseri na tabela HTML
         while ($linha = mysqli_fetch_array($result)) {
-            $return.= "<td id='campo_id'>" . utf8_encode($linha["id"]) . "</td>";
+            $return.= "<td id='campo_id' style='display:none'>" . utf8_encode($linha["id"]) . "</td>";
             $return.= "<td id='campo_nome_fantasia'>" . utf8_encode($linha["nome_fantasia"]) . "</td>";
             $return.= "<td id='campo_codigo'>" . utf8_encode($linha["codigo"]) . "</td>";
             $return.= "<td id='campo_razao_social'>" . utf8_encode($linha["razao_social"]) . "</td>";
