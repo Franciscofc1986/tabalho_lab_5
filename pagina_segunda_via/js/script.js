@@ -73,15 +73,15 @@ function login(){
      var xmlreq = CriaRequest();
      
      // Iniciar uma requisição
-     xmlreq.open("GET", "php/buscar_funcionario.php?txtnome=" + nome, true);
+     xmlreq.open("GET", "php/buscar_segunda_via.php?txtnome=" + nome, true);
 
+    
      // Atribui uma função para ser executada sempre que houver uma mudança de ado
      xmlreq.onreadystatechange = function(){
          
          // Verifica se foi concluído com sucesso e a conexão fechada (readyState=4)
-         if (xmlreq.readyState == 4) {
-             
-             // Verifica se o arquivo foi encontrado com sucesso
+         if (xmlreq.readyState == 4) {     
+                 // Verifica se o arquivo foi encontrado com sucesso
              if (xmlreq.status == 200) {
                  result.innerHTML = xmlreq.responseText;
              }else{
@@ -145,27 +145,26 @@ function marcar_para_editar(){
 } 
 };
 
+
 function editar_registro(){
  
     //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
     var dadosajax = {
       
           'id' : $(".selecionado #campo_id").text(),
-          'nome' : $(".selecionado #campo_nome").text(),     
-          'admissao' : $(".selecionado #campo_admissao").text(),
-          'telefone' : $(".selecionado #campo_telefone").text(),
-          'sexo' : $(".selecionado #campo_sexo").text(),
-          'cpf' : $(".selecionado #campo_cpf").text(),        
-          'rg' : $(".selecionado #campo_rg").text(), 
-          'pis' : $(".selecionado #campo_pis").text(),         
-          'funcao' : $(".selecionado #campo_funcao").text(),
-          'setor' : $(".selecionado #campo_setor").text(),
-          'salario' : $(".selecionado #campo_salario").text(),
-          'vale_transporte' : $(".selecionado #campo_vale_transporte").text(),
-          'insalubridade' : $(".selecionado #campo_insalubridade").text(),
-          'periculosidade'   : $(".selecionado #campo_periculosidade").text(),
+          'competencia' : $(".selecionado #campo_competencia").text(),     
+          'funcionario' : $(".selecionado #campo_funcionario").text(),
+          'dias_uteis' : $(".selecionado #campo_dias_uteis").text(),
+          'fds' : $(".selecionado #campo_dias_fds").text(),
+          'hora_extra_normal' : $(".selecionado #campo_hora_normal").text(),        
+          'hora_extra_fds' : $(".selecionado #campo_hora_fds").text(), 
+          'falta_normal' : $(".selecionado #campo_falta_normal").text(),         
+          'falta_fds' : $(".selecionado #campo_falta_fds").text(),
+          'add_noturno' : $(".selecionado #campo_add_noturno").text(),
+          'dependentes' : $(".selecionado #campo_dependentes").text(),
+          'adiantamento' : $(".selecionado #campo_adiantamento").text(),
     };
-    pageurl = 'php/editar_funcionario.php';
+    pageurl = 'php/editar_segunda_via.php';
     //para consultar mais opcoes possiveis numa chamada ajax
     //http://api.jquery.com/jQuery.ajax/
     $.ajax({
@@ -189,14 +188,14 @@ function editar_registro(){
             //se foi inserido com sucesso
             if($.trim(result) != '1')
             {
-               alert("Funcionario atualizado com sucesso!");
+               alert("Registro atualizado com sucesso!");
                getDados();
              
             }
             //se foi um erro
             else
             {
-             alert("Não foi possível atualizar o Funcionario!");
+             alert("Não foi possível atualizar o Registro!");
            
             }
  
@@ -209,9 +208,9 @@ function deletar_registro(){
     //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
     var dadosajax = {
       
-          'id' : $(".selecionado #campo_id").text(),
+           'id' : $(".selecionado #campo_id").text(),
     };
-    pageurl = 'php/deletar_funcionario.php';
+    pageurl = 'php/deletar_segunda_via.php';
     //para consultar mais opcoes possiveis numa chamada ajax
     //http://api.jquery.com/jQuery.ajax/
     $.ajax({
@@ -235,14 +234,14 @@ function deletar_registro(){
             //se foi inserido com sucesso
             if($.trim(result) != '1')
             {
-               alert("Funcionario deletado com sucesso!");
+               alert("Registro deletado com sucesso!");
                getDados();
              
             }
             //se foi um erro
             else
             {
-             alert("Não foi possível deletar o Funcionario!");
+             alert("Não foi possível deletar o Registro!");
            
             }
  

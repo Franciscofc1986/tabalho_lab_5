@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PayRoll - Folha</title>
+	<title>PayRoll - Relatório Gerencial</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -51,58 +51,87 @@
 	</div>
 
 	<div id="informacao_folha">
-		<label id="titles">Folha de Pagamento</label>
+		<label id="titles">Relatório Gerencial - Pagamento de Empregados</label>
 	<div class="campos">
 	<div id = "competencia">
 		<label class="inputs">Competência:</label>
 			<input type="text" id = "campo_competencia" required="required" />
 	</div>
-	<div id = "funcionario">
-		<label class="inputs">Funcionário:</label>
-			<select name="combobox_funcionarios" onChange="getDados()">
-				<option>Selecione o funcionário...</option>
-			</select> 
-	</div>		
-	<div id = "dias_uteis">
-		<label class="inputs">Dias úteis do mês:</label>
+	<div id = "emitente">
+		<label class="inputs">Emitente:</label>
 			<input type="text" id = "campo_dias_uteis" required="required" />
 	</div>
-	<div id = "fds">
-		<label class="inputs">Dias F.D.S. do mês:</label>
-			<input type="text" id = "campo_fds" required="required" />
-	</div>
-	<div id = "hora_extra_normal">
-		<label class="inputs">Hora extra normal:</label>
-			<input type="text" id = "campo_hora_extra_normal" required="required" />
-	</div>
-	<div id = "hora_extra_fds">
-		<label class="inputs">Hora extra F.D.S.:</label>
-			<input type="text" id = "campo_hora_extra_fds" required="required" />
-	</div>
-	<div id = "falta_normal">
-		<label class="inputs">Falta normal:</label>
-			<input type="text" id = "campo_falta_normal" required="required" />
-	</div>
-	<div id = "falta_fds">
-		<label class="inputs">Falta FDS:</label>
-			<input type="text" id = "campo_falta_fds" required="required" />
-	</div>
-	<div id = "add_noturno">
-		<label class="inputs">Adicional Noturno:</label>
-			<input type="text" id = "campo_add_noturno" required="required" />
-	</div>
-	<div id = "dependentes">
-		<label class="inputs">Nº de Dependentes:</label>
-			<input type="text" id = "campo_dependentes" required="required" />
-	</div>
-	<div id = "adiantamento">
-		<label class="inputs">Adiantamento:</label>
-			<input type="text" id = "campo_adiantamento" required="required" />
+	
+	<br>
+	<label id="proventos">Proventos</label>
+	<label id="descontos">Descontos</label>
+	</br>
+
+	<div class="labels_proventos">
+	<br><label>Salário Normal:</label></br>
+	<br><label>Insalubridade:</label></br>
+	<br><label>Periculosidade:</label></br>
+	<br><label>Adicional Noturno:</label></br>
+	<br><label>Horas Extras:</label></br>
+	<br><label>Horas Extras F.D.S:</label></br>
+	<br><label>Salário Família:</label></br>
+	<br><label>DSR Remunerado:</label></br>
+	<br><label>Total de Proventos:</label></br>
 	</div>
 
+	<div class="campos_proventos">
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+	</div>
+
+	<div class="labels_descontos">
+	<br><label>INSS:</label></br>
+	<br><label>Faltas:</label></br>
+	<br><label>Imposto de Renda:</label></br>
+	<br><label>Adiantamentos:</label></br>
+	<br><label>Vale-transporte:</label></br>
+	</div>
+
+	<div class="campos_descontos">
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+	</div>
+
+	<div id="total">
+		<label>Total de Descontos:</label>
+		<input type="text" required="required" />
+	</div>
+
+	<br><label id="separator1">___________________________________________________________________________________________________________________</label></br>
+
+	<br></br>
+		<div id="total_pagar">
+			<label>Total Líquido a pagar:</label>
+			<input type="text" required="required" />
+		</div>
+
+		<div id="total_funcionarios">
+			<label>Total de Funcionários:</label>
+			<input type="text" required="required" />
+		</div>
+
+		<div id="fgts">
+			<label>FGTS a recolher:</label>
+			<input type="text" required="required" />
+		</div>
+
 	<div class="botoes">
-		<input type="submit" value="Gerar" onClick="gerar_folha()"/>
-		<input type="submit" value="Consultar" />
+		<input type="submit" value="Voltar" onClick="voltar()"/>
 	</div>
 	</div>
 </div>

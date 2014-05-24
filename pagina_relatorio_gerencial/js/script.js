@@ -8,6 +8,7 @@ function buscar_emitentes(){
     window.location = '../pagina_consulta_emitente/index.html';
 }
 function funcionarios(){
+
 	window.location = '../pagina_funcionarios/index.html';
 }
 function buscar_funcionarios(){
@@ -17,8 +18,13 @@ function folha(){
 	window.location = '../pagina_folha/index.html';
 }
 function segunda_via(){
-	window.location = '../pagina_segunda_via/index.html';
+  window.location = '../pagina_segunda_via/index.html';
 }
+
+function pagina_recibo(){
+  window.location = '../pagina_recibo/index.html';
+}
+
 function relatorio(){
 	prompt('Digite a competência:');
 	pagina_relatorio();
@@ -35,14 +41,8 @@ function login(){
 		window.location = '../index.html';
 	//else (alert('OK, esta janela não será fechada ainda.'))
 }
-/*
-<a href="javascript:void();" onclick="login()" id ="item7" class="top_link"><span class="down">Logout</span></a>
-			<ul class="sub">
-			<li><a href="javascript:void();" onclick="fechar()">Fechar</a></li>	
 
-
-function fechar(){
-	if(confirm('Você tem certeza que quer fechar a janela?'))
-		window.close('_parent');
-	//else (alert('OK, esta janela não será fechada ainda.'))
-}*/
+function voltar(){
+	if(confirm('Você tem certeza que quer sair da página?'))
+		pagina_principal();
+}

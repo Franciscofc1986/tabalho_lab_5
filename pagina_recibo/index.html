@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PayRoll - Recibo</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="banner" />
+<div id="barra">
+	<ul id="nav">
+	<li class="top">
+		<a href="javascript:void();" onclick="pagina_principal()" id ="item1" class="top_link"><span>Página inicial</span></a>
+	</li>
+	<li class="top">
+		<a href="#nogo2" id ="item2" class="top_link"><span class="down">Emitente</span></a>
+				<ul class="sub">
+					<li><a href="javascript:void();" onclick="empresas()">Cadastro...</a></li>
+					<li><a href="javascript:void();" onclick="buscar_emitentes()">Editar/Deletar...</a></li>
+				</ul>
+			</li>
+			<li class="top">
+				<a href="#nogo5" id ="item3" class="top_link"><span class="down">Funcionarios</span></a>
+				<ul class="sub">
+					<li><a href="javascript:void();" onclick="funcionarios()">Controle...</a></li>
+					<li><a href="javascript:void();" onclick="buscar_funcionarios()">Editar/Deletar...</a></li>
+				</ul>
+			</li>
+			<li class="top">
+				<a href="#nogo9" id ="item4" class="top_link"><span class="down">Folha</span></a>
+				<ul class="sub">
+					<li><a href="javascript:void();" onclick="folha()">Variáveis...</a></li>
+					<li><a href="javascript:void();" onclick="segunda_via()">Segunda via...</a></li>
+				</ul>
+			</li>
+	<li class="top">
+		<a href="#nogo12" id ="item5" class="top_link"><span class="down">Relatório Gerencial</span></a>
+		<ul class="sub">
+			<li><a href="javascript:void();" onclick="relatorio()">Gerar Relatório...</a></li>
+		</ul>
+	</li>
+	<li class="top">
+		<a href="#nogo15" id ="item6" class="top_link"><span class="down">Mais...</span></a>
+		<ul class="sub">
+			<li><a href="javascript:void();" onclick="suporte()">Suporte</a></li>
+</ul>
+<li class="top">
+		<a href="javascript:void();" onclick="login()" id ="item7" class="top_link"><span>Logout</span></a>
+	</li>
+	</div>
+
+	<div id="informacao_recibo">
+		<label id="titles">Recibo</label>
+	<div class="campos">
+	<div id = "cnpj">
+		<label class="inputs">CNPJ:</label>
+			<input type="text" id = "campo_cnpj" required="required" />
+	</div>
+	<div id = "emitente">
+		<label class="inputs">Emitente:</label>
+			<input type="text" id = "campo_emitente" required="required" />
+	</div>		
+	<div id = "competencia">
+		<label class="inputs">Competência:</label>
+			<input type="text" id = "campo_competencia" required="required" />
+	</div>
+	<div id = "funcionario">
+		<label class="inputs">Funcionário:</label>
+			<input type="text" id = "campo_funcionario" required="required" />
+	</div>
+	<div id = "funcao">
+		<label class="inputs">Função:</label>
+			<input type="text" id = "campo_funcao" required="required" />
+	</div>
+	<br />
+	<div id="descricao">
+	<label class="second_inputs">Descrição:</label>
+	</div>
+
+	<div id="referencia">
+	<label class="second_inputs">Referência:</label>
+	</div>
+	<div id="vencimentos">
+	<label class="second_inputs">Vencimentos:</label>
+	</div>
+
+	<div id="descontos">
+	<label class="second_inputs">Descontos:</label>
+	</div>
+
+	<div class="campos_descricao">
+		<br><label>Salário Base:</label></br>
+		<br><label>Insalubridade:</label></br>
+		<br><label>Periculosidade:</label></br>
+		<br><label>Adicional Noturno:</label></br>
+		<br><label>Horas Extras:</label></br>
+		<br><label>Horas Extras FDS:</label></br>
+		<br><label>Salário Família:</label></br>
+		<br><label>DSR Remunerado:</label></br>
+		<br><label>Imposto de Renda:</label></br>
+		<br><label>Faltas:</label></br>
+		<br><label>Adiantamento:</label></br>
+		<br><label>Vale-Transporte:</label></br>
+		<br><label>INSS</label></br>
+	</div>
+
+	<div class="campos_referencia1">
+		<br><input id="campo_referencia_salario" type="text" required="required" /></br>
+		<br><input id="campo_referencia_insalubridade" type="text" required="required" /></br>
+		<br><input id="campo_referencia_periculosidade" type="text" required="required" /></br>
+		<br><input id="campo_referencia_add" type="text" required="required" /></br>
+		<br><input id="campo_referencia_hora_extra" type="text" required="required" /></br>
+		<br><input id="campo_referencia_fds" type="text" required="required" /></br>
+		<br><input id="campo_referencia_salario_familia" type="text" required="required" /></br>
+	</div>
+
+	<div class="campos_referencia2">
+		<br><input id="campo_referencia_faltas" type="text" required="required" /></br>
+		<br><input id="campo_referencia_vale_transporte" type="text" required="required" /></br>
+		<br><input id="campo_referencia_inss" type="text" required="required" /></br>
+	</div>
+
+	<div class="campos_vencimento">
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+	</div>
+
+	<div class="campos_desconto">
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+		<br><input type="text" required="required" /></br>
+	</div>
+
+	<br><label id="separator1">___________________________________________________________________________________________________________________</label></br>
+
+		<br></br>
+		<div id="total_vencimentos">
+			<label>Total de Vencimentos:</label>
+			<input type="text" required="required" />
+		</div>
+
+		<div id="total_descontos">
+			<label>Total de Descontos:</label>
+			<input type="text" required="required" />
+		</div>
+
+		<div id="total_liquido">
+			<label>Valor Líquido:</label>
+			<input type="text" required="required" />
+		</div>
+
+	<br><label id="separator1">___________________________________________________________________________________________________________________</label></br>
+		
+		<br></br>
+		<div id="total_salario_base">
+			<label>Salário Base:</label>
+			<input type="text" required="required" />
+		</div>
+
+		<div id="total_inss">
+			<label>Sal. Contr. INSS</label>
+			<input type="text" required="required" />
+		</div>
+
+		<div id="total_calc_fgts">
+			<label>Base calc.FGTS</label>
+			<input type="text" required="required" />
+		</div>
+
+		<div id="total_mes">
+			<label>FGTS do mês</label>
+			<input type="text" required="required" />
+		</div>
+
+		<div id="total_irrf">
+			<label>Base calc. IRRF</label>
+			<input type="text" required="required" />
+		</div>
+
+
+	<div id="botoes">
+		<input type="submit" value="Voltar" onClick="voltar()"/>
+	</div>
+	</div>
+</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+
+<footer>
+	<div id="links">Links Importantes:</div>
+</footer>
+</html>

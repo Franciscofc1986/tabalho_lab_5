@@ -1,0 +1,76 @@
+<?php
+if (isset($_GET["txtnome"])) {
+    $nome = $_GET["txtnome"];
+$host="localhost";
+$user="root";
+$pass="";
+$banco="payroll_database";
+
+$conexao = mysqli_connect($host, $user, $pass) or die(mysql_error());
+mysqli_select_db($conexao,$banco) or die(mysql_error());
+
+// Verifica se a variável está vazia
+
+if (empty($nome)) {
+$sql = "SELECT * FROM folha";
+} else {
+	$nome .= "%";
+        $sql = "SELECT * FROM folha WHERE funcionario like '$nome'";
+    }
+sleep(1);
+$result = mysqli_query($conexao,$sql);
+    $cont = mysqli_affected_rows($conexao);
+    // Verifica se a consulta retornou linhas 
+    if ($cont > 0) {
+        // Atribui o código HTML para montar uma tabela
+        $tabela = "<table id='tabelaEditavel' border='1'>
+                    <thead>
+                        <tr>
+                            <th style='display:none'>ID</th>
+                            <th class='sub'>Competência</th>
+                            <th class='sub'>Funcionário</th>
+                            <th class='sub'>Dias Úteis</th>
+                            <th class='sub'>Dias F.D.S</th>
+                            <th class='sub'>Hora Normal</th>
+                            <th class='sub'>Hora F.D.S</th>
+                            <th class='sub'>Falta Normal</th>
+                            <th class='sub'>Falta F.D.S</th>
+                            <th class='sub'>Adc. Noturno</th>
+                            <th class='sub'>Dependentes</th>
+                            <th class='sub'>Adiantamento</th>
+                            <th class='sub'>E/D</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>";
+
+        $textbox = "<input type='checkbox' name='marcar' onClick='valida_checkbox()'/>";
+        $return = "$tabela";
+        // Captura os dados da consulta e inseri na tabela HTML
+        while ($linha = mysqli_fetch_array($result)) {
+            $return.= "<td id='campo_id' style='display:none'>" . utf8_encode($linha["id"]) . "</td>";
+            $return.= "<td id='campo_competencia'>" . utf8_encode($linha["competencia"]) . "</td>";
+            $return.= "<td id='campo_funcionario'>" . utf8_encode($linha["funcionario"]) . "</td>";
+            $return.= "<td id='campo_dias_uteis'>" . utf8_encode($linha["dias_uteis"]) . "</td>";
+            $return.= "<td id='campo_dias_fds'>" . utf8_encode($linha["dias_fds"]) . "</td>";
+            $return.= "<td id='campo_hora_normal'>" . utf8_encode($linha["hora_normal"]) . "</td>";
+            $return.= "<td id='campo_hora_fds'>" . utf8_encode($linha["hora_fds"]) . "</td>";
+            $return.= "<td id='campo_falta_normal'>" . utf8_encode($linha["falta_normal"]) . "</td>";
+            $return.= "<td id='campo_falta_fds'>" . utf8_encode($linha["falta_fds"]) . "</td>";
+            $return.= "<td id='campo_add_noturno'>" . utf8_encode($linha["add_noturno"]) . "</td>";
+            $return.= "<td id='campo_dependentes'>" . utf8_encode($linha["dependentes"]) . "</td>";
+            $return.= "<td id='campo_adiantamento'>" . utf8_encode($linha["adiantamento"]) . "</td>";
+            $return.= "<td>" . ($textbox) . "</td>";
+            $return.= "</tr>";
+           
+        }
+        echo $return.="</tbody></table>";
+    } else {
+        // Se a consulta não retornar nenhum valor, exibi mensagem para o usuário
+        echo "Não foram encontrados registros!";
+    }
+}
+
+?>
+
+

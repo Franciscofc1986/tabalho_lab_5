@@ -16,8 +16,16 @@ function buscar_funcionarios(){
 function folha(){
 	window.location = '../pagina_folha/index.html';
 }
+function segunda_via(){
+    window.location = '../pagina_segunda_via/index.html';
+}
 function relatorio(){
-	alert('não implementado(ainda!)')
+    prompt('Digite a competência:');
+    pagina_relatorio();
+}
+
+function pagina_relatorio(){
+  window.location = '../pagina_relatorio_gerencial/index.html';
 }
 function suporte(){
 	alert(' FNS Developers emails de contato:\nnicolashenrique2@hotmail.com\nfrancielegarcia38@yahoo.com.br\nsbaneto@yahoo.com.br')
@@ -28,10 +36,7 @@ function login(){
 	//else (alert('OK, esta janela não será fechada ainda.'))
 }
 
-/**
-  * Função para criar um objeto XMLHTTPRequest
-  */
- function CriaRequest() {
+function CriaRequest() {
      try{
          request = new XMLHttpRequest();        
      }catch (IEAtual){

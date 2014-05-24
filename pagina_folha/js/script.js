@@ -17,8 +17,21 @@ function buscar_funcionarios(){
 function folha(){
 	window.location = '../pagina_folha/index.html';
 }
+function segunda_via(){
+  window.location = '../pagina_segunda_via/index.html';
+}
+
+function pagina_recibo(){
+  window.location = '../pagina_recibo/index.html';
+}
+
 function relatorio(){
-	alert('não implementado(ainda!)')
+  prompt('Digite a competência:');
+  pagina_relatorio();
+}
+
+function pagina_relatorio(){
+  window.location = '../pagina_relatorio_gerencial/index.html';
 }
 function suporte(){
 	alert(' FNS Developers emails de contato:\nnicolashenrique2@hotmail.com\nfrancielegarcia38@yahoo.com.br\nsbaneto@yahoo.com.br')
@@ -28,6 +41,40 @@ function login(){
 		window.location = '../index.html';
 	//else (alert('OK, esta janela não será fechada ainda.'))
 }
+
+function CriaRequest() {
+     try{
+         request = new XMLHttpRequest();        
+     }catch (IEAtual){
+         
+         try{
+             request = new ActiveXObject("Msxml2.XMLHTTP");       
+         }catch(IEAntigo){
+         
+             try{
+                 request = new ActiveXObject("Microsoft.XMLHTTP");          
+             }catch(falha){
+                 request = false;
+             }
+         }
+     }
+     
+     if (!request) 
+         alert("Seu Navegador não suporta Ajax!");
+     else
+         return request;
+ }
+ 
+ /**
+  * Função para enviar os dados
+  */
+ function getDados() {
+     
+     var xmlreq = CriaRequest();
+     
+     // Iniciar uma requisição
+     xmlreq.open("GET", "php/buscar_funcionario.php");
+ }
 
 function gerar_folha(){
  
@@ -82,6 +129,8 @@ function gerar_folha(){
                document.getElementById('campo_add_noturno').value="";
                document.getElementById('campo_dependentes').value="";
                document.getElementById('campo_adiantamento').value="";
+
+               pagina_recibo();
             }
             //se foi um erro
             else

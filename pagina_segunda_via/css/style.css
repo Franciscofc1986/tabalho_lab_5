@@ -98,133 +98,72 @@ body{
 	font-size: 110%;
 	font-weight: bold;
 	position: absolute;
-	left: 43.5%;
+	left: 41%;
 	margin-top: 5px;
 }
 
-#informacao_folha{
-	margin-left: 14%;
-	margin-right: 14%;
+#informacao_emitentes{
+	margin: 0 auto;
 	margin-bottom: 1%;
 	margin-top: 20px;
 	border: 1px solid #fff;
 	border-radius: 5px;
 	background-color: #fff;
-	height: 270px;
+	height: 330px;
+	width: 1200px;
 }
 
-.campos{
-	margin-left: 4px;
-	margin-top: 50px;
-	color: #1e1e1e;
-}
-#funcionario, #fds, #hora_extra_fds, #falta_fds, #dependentes{
-	margin-top: -23px;
-	margin-left: 265px;
+#procurar{
+	margin-left: 20px;
+	margin-top: 40px;
 }
 
-#empresa{
-	margin-left: 50px;
+#tabela{
+	margin-bottom: 2%;
+	margin-top: 15px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background-color: #fff;
+	height: 150px;
 }
 
-#competencia, #dias_uteis, #hora_extra_normal, #falta_normal, #add_noturno, #adiantamento{
-	margin-top: 20px;
-	margin-left: 50px;
+table{
+	border: 1px solid #000;
+	border-collapse: collapse;
+	text-align: center;
+	margin: 0 auto;
 }
 
-#competencia input{
-	margin-left: 29px;
-	width: 170px;
+th{
+	border: 1px solid #000;
+	padding: 3px;
+	background-color: #336699;
+	color: #fff;
 }
 
-#funcionario{
-	margin-left: 360px;
+td{
+	background-color: #99CCCC;
+	color: #000;
 }
 
-#funcionario select{
-	width: 445px;
+td:hover{
+	background-color: #99FFCC;
+
 }
 
-#dias_uteis input{
-	width: 30px;
+#botoes{
+	margin-bottom: 20px;
+	margin-left: 42%;
 }
-
-#fds{
-	margin-left: 220px;
-}
-
-#fds input{
-	width: 30px;
-}
-
-#hora_extra_normal, #hora_extra_fds{
-	margin-top: -22px;
-}
-
-#hora_extra_normal{
-	margin-left: 400px;
-}
-
-#hora_extra_normal input{
-	width: 110px;
-}
-
-#hora_extra_fds{
-	margin-left: 654px;
-}
-
-#hora_extra_fds input{
-	width: 110px
-}
-
-#falta_normal input{
-	width: 58px;
-	margin-left: 32px
-}
-
-#falta_fds{
-	margin-left: 240px;
-}
-
-#falta_fds input{
-	width: 80px;
-}
-
-#add_noturno{
-	margin-top: -23px;
-	margin-left: 410px;
-}
-
-#add_noturno input{
-	width: 100px;
-}
-
-#dependentes{
-	margin-left: 654px;
-}
-
-#dependentes input{
-	width: 100px;
-}
-
-#adiantamento input{
-	width: 58px;
-	margin-left: 23px;
-}
-.botoes{
-	margin-top: 30px;	
-	margin-left: 41%;
-}
-
 
 footer{
-	margin-left: 14%;
-	margin-right: 14%;
+	margin: 0 auto;
 	margin-bottom: 2%;
 	border: 1px solid #fff;
 	border-radius: 5px;
 	background-color: #fff;
 	height: 150px;
+	width: 1200px;
 }
 
 #links{

@@ -98,7 +98,7 @@ body{
 	font-size: 110%;
 	font-weight: bold;
 	position: absolute;
-	left: 43.5%;
+	left: 35%;
 	margin-top: 5px;
 }
 
@@ -110,7 +110,7 @@ body{
 	border: 1px solid #fff;
 	border-radius: 5px;
 	background-color: #fff;
-	height: 270px;
+	height: 670px;
 }
 
 .campos{
@@ -118,102 +118,75 @@ body{
 	margin-top: 50px;
 	color: #1e1e1e;
 }
-#funcionario, #fds, #hora_extra_fds, #falta_fds, #dependentes{
-	margin-top: -23px;
-	margin-left: 265px;
-}
-
-#empresa{
-	margin-left: 50px;
-}
-
-#competencia, #dias_uteis, #hora_extra_normal, #falta_normal, #add_noturno, #adiantamento{
+#competencia{
 	margin-top: 20px;
-	margin-left: 50px;
+	margin-left: 20px;
 }
 
-#competencia input{
-	margin-left: 29px;
-	width: 170px;
-}
-
-#funcionario{
-	margin-left: 360px;
-}
-
-#funcionario select{
-	width: 445px;
-}
-
-#dias_uteis input{
-	width: 30px;
-}
-
-#fds{
-	margin-left: 220px;
-}
-
-#fds input{
-	width: 30px;
-}
-
-#hora_extra_normal, #hora_extra_fds{
+#emitente{
 	margin-top: -22px;
+	margin-left: 270px;
 }
 
-#hora_extra_normal{
+#emitente input{
+	width: 580px;
+}
+
+#proventos{
+	margin-left: 200px;
+}
+
+#descontos{
 	margin-left: 400px;
 }
 
-#hora_extra_normal input{
-	width: 110px;
+.labels_proventos{
+	margin-left: 30px;
 }
 
-#hora_extra_fds{
-	margin-left: 654px;
+.campos_proventos{
+	margin-top: -370px;
+	margin-left: 250px;
 }
 
-#hora_extra_fds input{
-	width: 110px
+.labels_descontos{
+	margin-top: -380px;
+	margin-left: 540px;
 }
 
-#falta_normal input{
-	width: 58px;
-	margin-left: 32px
+.campos_descontos{
+	margin-top: -205px;
+	margin-left: 750px;
 }
 
-#falta_fds{
-	margin-left: 240px;
+#total{
+	margin-top: 155px;
+	margin-left: 540px; 
 }
 
-#falta_fds input{
-	width: 80px;
+#total input{
+	margin-left: 80px; 
 }
 
-#add_noturno{
-	margin-top: -23px;
-	margin-left: 410px;
+#separator1{
+	color: #213186;
+	margin-left: 20px;
 }
 
-#add_noturno input{
-	width: 100px;
+#total_pagar{
+	margin-left: 20px;
 }
-
-#dependentes{
-	margin-left: 654px;
+#total_funcionarios{
+	margin-top: -22px;
+	margin-left: 340px
 }
-
-#dependentes input{
-	width: 100px;
-}
-
-#adiantamento input{
-	width: 58px;
-	margin-left: 23px;
+#fgts{
+	margin-top: -22px;
+	margin-left: 670px
 }
 .botoes{
-	margin-top: 30px;	
-	margin-left: 41%;
+	margin-top: 5%;	
+	margin-left: 45%;
 }
 
 

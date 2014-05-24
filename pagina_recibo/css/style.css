@@ -98,11 +98,11 @@ body{
 	font-size: 110%;
 	font-weight: bold;
 	position: absolute;
-	left: 43.5%;
+	left: 48%;
 	margin-top: 5px;
 }
 
-#informacao_folha{
+#informacao_recibo{
 	margin-left: 14%;
 	margin-right: 14%;
 	margin-bottom: 1%;
@@ -110,7 +110,7 @@ body{
 	border: 1px solid #fff;
 	border-radius: 5px;
 	background-color: #fff;
-	height: 270px;
+	height: 1020px;
 }
 
 .campos{
@@ -118,105 +118,165 @@ body{
 	margin-top: 50px;
 	color: #1e1e1e;
 }
-#funcionario, #fds, #hora_extra_fds, #falta_fds, #dependentes{
-	margin-top: -23px;
-	margin-left: 265px;
+#cnpj, #emitente{
+	margin-left: 20px;
 }
 
-#empresa{
-	margin-left: 50px;
+#cnpj input{
+	margin-left: 40px;
+	width: 130px;
 }
 
-#competencia, #dias_uteis, #hora_extra_normal, #falta_normal, #add_noturno, #adiantamento{
+#emitente{
+	margin-top: -22px;
+	margin-left: 250px;
+}
+
+#emitente input{
+	width: 370px;
+}
+
+#competencia, #funcionario, #funcao{
 	margin-top: 20px;
-	margin-left: 50px;
 }
 
-#competencia input{
-	margin-left: 29px;
-	width: 170px;
+#competencia{
+	margin-top: -22px;
+	margin-left: 700px;
 }
 
 #funcionario{
-	margin-left: 360px;
+	margin-left: 20px;
 }
 
-#funcionario select{
-	width: 445px;
+#funcionario input{
+	width: 400px;
 }
 
-#dias_uteis input{
-	width: 30px;
-}
-
-#fds{
-	margin-left: 220px;
-}
-
-#fds input{
-	width: 30px;
-}
-
-#hora_extra_normal, #hora_extra_fds{
+#funcao{
 	margin-top: -22px;
+	margin-left: 520px;
 }
 
-#hora_extra_normal{
-	margin-left: 400px;
+#funcao input{
+	width: 353px;
 }
 
-#hora_extra_normal input{
-	width: 110px;
+
+#descricao{
+	margin-top: 20px;
+	margin-left: 80px;
 }
 
-#hora_extra_fds{
-	margin-left: 654px;
+#referencia{
+	margin-top: -19px;
+	margin-left: 300px;
 }
 
-#hora_extra_fds input{
-	width: 110px
+#vencimentos{
+	margin-top: -19px;
+	margin-left: 530px;
 }
 
-#falta_normal input{
-	width: 58px;
-	margin-left: 32px
+#descontos{
+	margin-top: -19px;
+	margin-left: 770px;
 }
 
-#falta_fds{
-	margin-left: 240px;
+.campos_descricao{
+	margin-left: 20px;
 }
 
-#falta_fds input{
-	width: 80px;
+.campos_referencia1{
+	margin-top: -527px;
+	margin-left: 260px;
 }
 
-#add_noturno{
-	margin-top: -23px;
-	margin-left: 410px;
+.campos_referencia2{
+	margin-top: 78px;
+	margin-left: 260px;
 }
 
-#add_noturno input{
-	width: 100px;
+
+#campo_referencia_vale_transporte{
+	margin-top: 37px;
 }
 
-#dependentes{
-	margin-left: 654px;
+.campos_vencimento{
+	margin-top: -535px;
+	margin-left: 500px;
 }
 
-#dependentes input{
-	width: 100px;
+.campos_desconto{
+	margin-top: -2px;
+	margin-left: 740px;
 }
 
-#adiantamento input{
-	width: 58px;
-	margin-left: 23px;
+#separator1{
+	color: #213186;
+	margin-left: 20px;
 }
 .botoes{
-	margin-top: 30px;	
-	margin-left: 41%;
+	margin-top: 80px;	
+	margin-left: 45%;
 }
 
+#total_vencimentos{
+	margin-left: 20px
+}
+#total_descontos{
+	margin-top: -22px;
+	margin-left: 360px;
+}
+#total_liquido{
+	margin-top: -22px;
+	margin-left: 690px;
+}
 
+#total_salario_base{
+	margin-left: 20px;
+}
+
+#total_salario_base input{
+	width: 60px;
+}
+#total_inss{
+	margin-top: -22px;
+	margin-left: 190px;
+}
+
+#total_inss input{
+	width: 60px;
+}
+#total_calc_fgts{
+	margin-top: -22px;
+	margin-left: 380px;
+}
+
+#total_calc_fgts input{
+	width: 60px;
+}
+#total_mes{
+	margin-top: -22px;
+	margin-left: 570px;
+}
+
+#total_mes input{
+	width: 60px;
+}
+#total_irrf{
+	margin-top: -22px;
+	margin-left: 750px;
+}
+
+#total_irrf input{
+	width: 60px;
+}
+
+#botoes{
+	margin-top: 5%;
+	margin-left: 45%;
+}
 footer{
 	margin-left: 14%;
 	margin-right: 14%;
