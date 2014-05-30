@@ -6,7 +6,7 @@
 	<title>PayRoll - Folha</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onLoad="buscar_funcionarios()">
 <div id="banner" />
 <div id="barra">
 	<ul id="nav">
@@ -49,7 +49,6 @@
 		<a href="javascript:void();" onclick="login()" id ="item7" class="top_link"><span>Logout</span></a>
 	</li>
 	</div>
-
 	<div id="informacao_folha">
 		<label id="titles">Folha de Pagamento</label>
 	<div class="campos">
@@ -59,9 +58,7 @@
 	</div>
 	<div id = "funcionario">
 		<label class="inputs">Funcionário:</label>
-			<select name="combobox_funcionarios" onChange="getDados()">
-				<option>Selecione o funcionário...</option>
-			</select> 
+			<select id="combobox_funcionarios"></select> 
 	</div>		
 	<div id = "dias_uteis">
 		<label class="inputs">Dias úteis do mês:</label>
@@ -101,14 +98,14 @@
 	</div>
 
 	<div class="botoes">
-		<input type="submit" value="Gerar" onClick="gerar_folha()"/>
-		<input type="submit" value="Consultar" />
+		<input type="submit" value="Gerar" onClick="validar_combobox()"/>
 	</div>
 	</div>
-</div>
+	</div>
 
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	
 </body>
 
 <footer>

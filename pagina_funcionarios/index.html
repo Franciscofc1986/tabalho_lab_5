@@ -50,6 +50,7 @@
 		<a href="javascript:void();" onclick="login()" id ="item7" class="top_link"><span>Logout</span></a>
 	</li>
 	</div>
+<form action="" id="formulario" name="formulario" method="post">
 	<div id="informacao_funcionarios">
 		<label id="titles">Controle de Funcionários</label>
 	<div class="campos">
@@ -67,7 +68,10 @@
 	</div>
 	<div id = "sexo">
 		<label class="inputs">Sexo: </label>
-			<input type="text" id="campo_sexo" required="required" />
+		<select id="campo_sexo">
+		<option value="">Masculino</option>
+		<option value="">Feminino</option>
+		</select> 
 	</div>
 	<div id = "cpf">
 		<label class="inputs">CPF:</label>
@@ -108,9 +112,10 @@
 	</div>
 	
 	<div class="botoes">
-		<input type="submit" value="Incluir" onclick="inserir_registo()"/>
+		<input type="submit" value="Incluir"/>
 	</div>
 	</div>
+</form>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>

@@ -6,7 +6,7 @@
 	<title>PayRoll - Relatório Gerencial</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onload="carrega_competencia()">
 <div id="banner" />
 <div id="barra">
 	<ul id="nav">
@@ -49,13 +49,13 @@
 		<a href="javascript:void();" onclick="login()" id ="item7" class="top_link"><span>Logout</span></a>
 	</li>
 	</div>
-
+	<form name="formulario">
 	<div id="informacao_folha">
 		<label id="titles">Relatório Gerencial - Pagamento de Empregados</label>
 	<div class="campos">
 	<div id = "competencia">
 		<label class="inputs">Competência:</label>
-			<input type="text" id = "campo_competencia" required="required" />
+			<input type="text" name = "campo_competencia" required="required" />
 	</div>
 	<div id = "emitente">
 		<label class="inputs">Emitente:</label>
@@ -135,7 +135,7 @@
 	</div>
 	</div>
 </div>
-
+</form>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>

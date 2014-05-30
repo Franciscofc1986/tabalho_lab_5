@@ -6,7 +6,7 @@
 	<title>PayRoll - Recibo</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onLoad="buscar_recibo()">
 <div id="banner" />
 <div id="barra">
 	<ul id="nav">
@@ -122,7 +122,7 @@
 	</div>
 
 	<div class="campos_vencimento">
-		<br><input type="text" required="required" /></br>
+		<br><input id="campo_vencimento_salario" type="text" required="required" /></br>
 		<br><input type="text" required="required" /></br>
 		<br><input type="text" required="required" /></br>
 		<br><input type="text" required="required" /></br>
@@ -135,7 +135,7 @@
 	<div class="campos_desconto">
 		<br><input type="text" required="required" /></br>
 		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
+		<br><input id="campo_desconto_adiantamento" type="text" required="required" /></br>
 		<br><input type="text" required="required" /></br>
 		<br><input type="text" required="required" /></br>
 	</div>

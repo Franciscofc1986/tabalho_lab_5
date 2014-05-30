@@ -26,12 +26,7 @@ function pagina_recibo(){
 }
 
 function relatorio(){
-  prompt('Digite a competência:');
-  pagina_relatorio();
-}
-
-function pagina_relatorio(){
-  window.location = '../pagina_relatorio_gerencial/index.html';
+    window.location = '../pagina_relatorio_gerencial/index.html';
 }
 function suporte(){
 	alert(' FNS Developers emails de contato:\nnicolashenrique2@hotmail.com\nfrancielegarcia38@yahoo.com.br\nsbaneto@yahoo.com.br')
@@ -42,39 +37,28 @@ function login(){
 	//else (alert('OK, esta janela não será fechada ainda.'))
 }
 
-function CriaRequest() {
-     try{
-         request = new XMLHttpRequest();        
-     }catch (IEAtual){
-         
-         try{
-             request = new ActiveXObject("Msxml2.XMLHTTP");       
-         }catch(IEAntigo){
-         
-             try{
-                 request = new ActiveXObject("Microsoft.XMLHTTP");          
-             }catch(falha){
-                 request = false;
-             }
-         }
-     }
-     
-     if (!request) 
-         alert("Seu Navegador não suporta Ajax!");
-     else
-         return request;
- }
- 
- /**
-  * Função para enviar os dados
-  */
- function getDados() {
-     
-     var xmlreq = CriaRequest();
-     
-     // Iniciar uma requisição
-     xmlreq.open("GET", "php/buscar_funcionario.php");
- }
+function buscar_funcionarios(){
+    $.getJSON('php/buscar_funcionario.php', function (dados){
+       if (dados.length > 0){   
+        var option = '<option value="">Selecione o Funcinário...</option>';
+        $.each(dados, function(i, obj){
+          option += '<option value="'+obj.id+'">'+obj.nome+'</option>';
+        })
+        $('#combobox_funcionarios').html(option).show();
+       }else{
+         Reset();
+       }
+    });
+  }
+
+function validar_combobox(){
+  if($("#combobox_funcionarios option:selected").text()=="Selecione o Funcinário..."){
+      alert('Por Favor, Selecione um Funcionário!');
+  }else{
+    gerar_folha();
+  }
+}
+
 
 function gerar_folha(){
  
@@ -82,7 +66,7 @@ function gerar_folha(){
     var dadosajax = {
       
           'competencia' : $("#campo_competencia").val(),     
-      	  'funcionario' : $("#campo_funcionario").val(),
+      	  'funcionario' : $("#combobox_funcionarios option:selected").text(),
 	      'dias_uteis' : $("#campo_dias_uteis").val(),
 	      'fds' : $("#campo_fds").val(),
 	      'hora_extra_normal' : $("#campo_hora_extra_normal").val(),	      
@@ -119,7 +103,6 @@ function gerar_folha(){
             {
 			   alert("Folha Gerada com sucesso!");
                document.getElementById('campo_competencia').value="";
-               document.getElementById('campo_funcionario').value="";
                document.getElementById('campo_dias_uteis').value="";
                document.getElementById('campo_fds').value="";
                document.getElementById('campo_hora_extra_normal').value="";
@@ -137,7 +120,6 @@ function gerar_folha(){
             {
              alert("Não foi possível gerar a folha!");
                document.getElementById('campo_competencia').value="";
-               document.getElementById('campo_funcionario').value="";
                document.getElementById('campo_dias_uteis').value="";
                document.getElementById('campo_fds').value="";
                document.getElementById('campo_hora_extra_normal').value="";
@@ -152,4 +134,5 @@ function gerar_folha(){
         }
     });
 }
- 
+
+

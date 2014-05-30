@@ -17,7 +17,6 @@ $sql = "SELECT * FROM funcionarios";
 	$nome .= "%";
         $sql = "SELECT * FROM funcionarios WHERE nome like '$nome'";
     }
-sleep(1);
 $result = mysqli_query($conexao,$sql);
     $cont = mysqli_affected_rows($conexao);
     // Verifica se a consulta retornou linhas 

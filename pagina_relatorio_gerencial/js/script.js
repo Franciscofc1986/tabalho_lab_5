@@ -1,3 +1,4 @@
+var form=document.formulario;
 function pagina_principal(){
 	window.location = '../pagina_inicial/pagina_inicial.html';	
 }
@@ -25,12 +26,21 @@ function pagina_recibo(){
   window.location = '../pagina_recibo/index.html';
 }
 
-function relatorio(){
-	prompt('Digite a competência:');
-	pagina_relatorio();
+function carrega_competencia(){
+	competencia = prompt('Digite a competência:');
+	if (competencia==null){
+		//alert("voltando!");
+		window.history.back();
+	}
+	else{
+    	if(competencia.length>0){
+    	form.campo_competencia.value=competencia;
+		}
+	}
+
 }
 
-function pagina_relatorio(){
+function relatorio(){
   window.location = '../pagina_relatorio_gerencial/index.html';
 }
 function suporte(){
@@ -46,3 +56,4 @@ function voltar(){
 	if(confirm('Você tem certeza que quer sair da página?'))
 		pagina_principal();
 }
+

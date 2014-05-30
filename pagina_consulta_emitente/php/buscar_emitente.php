@@ -17,7 +17,6 @@ $sql = "SELECT * FROM emitentes";
 	$nome .= "%";
         $sql = "SELECT * FROM emitentes WHERE nome_fantasia like '$nome'";
     }
-sleep(1);
 $result = mysqli_query($conexao,$sql);
     $cont = mysqli_affected_rows($conexao);
     // Verifica se a consulta retornou linhas 
