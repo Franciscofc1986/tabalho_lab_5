@@ -39,7 +39,7 @@ $result = mysqli_query($conexao,$sql);
                             <th class='sub'>UF</th>
                             <th class='sub'>CEP</th>
                             <th class='sub'>Email</th>
-                            <th class='sub'>E/D</th>
+                            <th class='sub'>E</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -34,10 +34,7 @@ function login(){
 	//else (alert('OK, esta janela não será fechada ainda.'))
 }
 
-/**
-  * Função para criar um objeto XMLHTTPRequest
-  */
- function CriaRequest() {
+function CriaRequest() {
      try{
          request = new XMLHttpRequest();        
      }catch (IEAtual){
@@ -66,20 +63,19 @@ function login(){
  function getDados() {
      
      // Declaração de Variáveis
-     var nome   = document.getElementById("txtnome").value;
      var result = document.getElementById("tabela");
      var xmlreq = CriaRequest();
      
      // Iniciar uma requisição
-     xmlreq.open("GET", "php/buscar_funcionario.php?txtnome=" + nome, true);
+     xmlreq.open("GET", "php/buscar_usuario.php");
 
+    
      // Atribui uma função para ser executada sempre que houver uma mudança de ado
      xmlreq.onreadystatechange = function(){
          
          // Verifica se foi concluído com sucesso e a conexão fechada (readyState=4)
-         if (xmlreq.readyState == 4) {
-             
-             // Verifica se o arquivo foi encontrado com sucesso
+         if (xmlreq.readyState == 4) {     
+                 // Verifica se o arquivo foi encontrado com sucesso
              if (xmlreq.status == 200) {
                  result.innerHTML = xmlreq.responseText;
              }else{
@@ -143,27 +139,17 @@ function marcar_para_editar(){
 } 
 };
 
+
 function editar_registro(){
  
     //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
     var dadosajax = {
       
           'id' : $(".selecionado #campo_id").text(),
-          'nome' : $(".selecionado #campo_nome").text(),     
-          'admissao' : $(".selecionado #campo_admissao").text(),
-          'telefone' : $(".selecionado #campo_telefone").text(),
-          'sexo' : $(".selecionado #campo_sexo").text(),
-          'cpf' : $(".selecionado #campo_cpf").text(),        
-          'rg' : $(".selecionado #campo_rg").text(), 
-          'pis' : $(".selecionado #campo_pis").text(),         
-          'funcao' : $(".selecionado #campo_funcao").text(),
-          'setor' : $(".selecionado #campo_setor").text(),
-          'salario' : $(".selecionado #campo_salario").text(),
-          'vale_transporte' : $(".selecionado #campo_vale_transporte").text(),
-          'insalubridade' : $(".selecionado #campo_insalubridade").text(),
-          'periculosidade'   : $(".selecionado #campo_periculosidade").text(),
+          'login' : $(".selecionado #campo_login").text(),     
+          'senha' : $(".selecionado #campo_senha").text(),
     };
-    pageurl = 'php/editar_funcionario.php';
+    pageurl = 'php/editar_usuario.php';
     //para consultar mais opcoes possiveis numa chamada ajax
     //http://api.jquery.com/jQuery.ajax/
     $.ajax({
@@ -187,60 +173,14 @@ function editar_registro(){
             //se foi inserido com sucesso
             if($.trim(result) != '1')
             {
-               alert("Funcionario atualizado com sucesso!");
+               alert("Usuário atualizado com sucesso!");
                getDados();
              
             }
             //se foi um erro
             else
             {
-             alert("Não foi possível atualizar o Funcionario!");
-           
-            }
- 
-        }
-    });
-}
-
-function deletar_registro(){
- 
-    //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
-    var dadosajax = {
-      
-          'id' : $(".selecionado #campo_id").text(),
-    };
-    pageurl = 'php/deletar_funcionario.php';
-    //para consultar mais opcoes possiveis numa chamada ajax
-    //http://api.jquery.com/jQuery.ajax/
-    $.ajax({
- 
-        //url da pagina
-        url: pageurl,
-        //parametros a passar
-        data: dadosajax,
-        //tipo: POST ou GET
-        type: 'POST',
-        //cache
-        cache: false,
-        //se ocorrer um erro na chamada ajax, retorna este alerta
-        //possiveis erros: pagina nao existe, erro de codigo na pagina, falha de comunicacao/internet, etc etc etc
-        error: function(){
-            alert('Erro: Deletar Registo!!');
-        },
-        //retorna o resultado da pagina para onde enviamos os dados
-        success: function(result)
-        { 
-            //se foi inserido com sucesso
-            if($.trim(result) != '1')
-            {
-               alert("Funcionario deletado com sucesso!");
-               getDados();
-             
-            }
-            //se foi um erro
-            else
-            {
-             alert("Não foi possível deletar o Funcionario!");
+             alert("Não foi possível atualizar o Usuário!");
            
             }
  

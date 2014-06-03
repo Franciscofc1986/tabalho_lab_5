@@ -3,10 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PayRoll - Página Inicial</title>
+	<title>PayRoll - Editar Senha do Usuário</title>
 	<link rel="stylesheet" href="css/style.css">
-	<script src="scripts\script.js"></script>
-
+	
 </head>
 <body>
 <div id="banner" />
@@ -52,15 +51,21 @@
 		<a href="javascript:void();" onclick="login()" id ="item7" class="top_link"><span>Logout</span></a>
 	</li>
 	</div>
-	<div id="noticias">
-		<label id="bemvindo">Seja Bem-Vindo!</label>
-		<br /><p>Versátil, completo e fácil de usar. PayRoll é um dos softwares mais complexos para gerenciamentos de micros e pequenas empresas de comércio na área de departamento de pessoal, automatizando, otimizando processos, atendendo a legislação e as suas necessidades.</p>
-		<img title="Facilidade para você!" id="para_voce" id="rais" src="css/images/para_voce.jpg" />
-		<img title="Para sua Empresa!" id="para_empresa" id="rais" src="css/images/empresa.jpg" />
-		<img title="Crescimento exponencial!" id="crescimento" id="rais" src="css/images/sucesso.jpg" />
-
+	<div id="informacao_user">
+	<label id="titles">Usuário do Sistema</label>
+	<div id="procurar">
+	<input type="submit" value="Procurar" onclick="getDados()">
+	<p><label>*Clique em "Procurar" para procurar o usuário do Sistema.</label></p>
 	</div>
-	<script src="js/script.js"></script>
+	<div id="tabela">
+	
+	</div>
+	<div id="botoes">
+	<input type="submit" value="Editar" onClick="editar_registro()">
+	</div>
+   </div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 <footer>

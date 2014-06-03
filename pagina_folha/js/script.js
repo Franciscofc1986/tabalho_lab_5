@@ -28,6 +28,9 @@ function pagina_recibo(){
 function relatorio(){
     window.location = '../pagina_relatorio_gerencial/index.html';
 }
+function senha(){
+     window.location = '../pagina_editar_senha/index.html';
+}
 function suporte(){
 	alert(' FNS Developers emails de contato:\nnicolashenrique2@hotmail.com\nfrancielegarcia38@yahoo.com.br\nsbaneto@yahoo.com.br')
 }

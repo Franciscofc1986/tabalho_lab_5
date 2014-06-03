@@ -26,6 +26,9 @@ function relatorio(){
 function suporte(){
 	alert(' FNS Developers emails de contato:\nnicolashenrique2@hotmail.com\nfrancielegarcia38@yahoo.com.br\nsbaneto@yahoo.com.br')
 }
+function senha(){
+     window.location = '../pagina_editar_senha/index.html';
+}
 function login(){
 	if(confirm('Você tem certeza que quer sair do sistema?'))
 		window.location = '../index.html';
