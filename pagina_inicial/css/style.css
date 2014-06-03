@@ -95,7 +95,8 @@ body{
 
 
 #bemvindo{
-	color: #1e1e1e;
+	color: #213186;
+	font-weight: bold;
 	font-size: 120%;
 	position: absolute;
 	 top: 220px;
@@ -113,9 +114,12 @@ body{
 	border: 1px solid #fff;
 	border-radius: 5px;
 	background-color: #fff;
-	height: 600px;
+	height: 300px;
 }
-
+p{
+	margin-left: 20px;
+	text-align: justify;
+}
 .titles{
 	color: #213186;
 	font-size: 110%;
@@ -179,5 +183,37 @@ footer{
 	position: absolute;
 }
 
+.links_d{
+	margin-left: 45px;
+	margin-top: 40px;
+}
 
+#para_voce{
+	margin-top: 10px;
+	margin-left: 45px;
+	height: 160px;
+	width: 230px;
+	border: 3px solid #213186;
+	border-radius: 5px;
+	box-shadow: black 0.0em 0.1em 0.2em 0.1em;
+}
 
+#para_empresa{
+	margin-top: 10px;
+	margin-left: 80px;
+	height: 160px;
+	width: 230px;
+	border: 3px solid #213186;
+	border-radius: 5px;
+	box-shadow: black 0.0em 0.1em 0.2em 0.1em;
+}
+
+#crescimento{
+	margin-top: 10px;
+	margin-left: 80px;
+	height: 160px;
+	width: 230px;
+	border: 3px solid #213186;
+	border-radius: 5px;
+	box-shadow: black 0.0em 0.1em 0.2em 0.1em;
+}

@@ -109,7 +109,7 @@ body{
 	border: 1px solid #fff;
 	border-radius: 5px;
 	background-color: #fff;
-	height: 330px;
+	height: 270px;
 	width: 1200px;
 }
 
@@ -124,7 +124,7 @@ body{
 	border: 1px solid #fff;
 	border-radius: 5px;
 	background-color: #fff;
-	height: 150px;
+	height: 90px;
 }
 
 table{
@@ -152,8 +152,8 @@ td:hover{
 }
 
 #botoes{
-	margin-bottom: 20px;
-	margin-left: 42%;
+	margin-bottom: 10px;
+	margin-left: 44%;
 }
 
 footer{
@@ -174,3 +174,8 @@ footer{
 	font-size: 120%;
 	position: absolute;
 }
+.links_d{
+	margin-left: 85px;
+	margin-top: 40px;
+}
+

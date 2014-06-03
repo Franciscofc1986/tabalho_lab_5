@@ -124,7 +124,9 @@ body{
 	border: 1px solid #fff;
 	border-radius: 5px;
 	background-color: #fff;
-	height: 150px;
+	height: 120px;
+	width:1198px;
+	overflow: auto;
 }
 
 table{
@@ -173,4 +175,9 @@ footer{
 	color: #1e1e1e;
 	font-size: 120%;
 	position: absolute;
+}
+
+.links_d{
+	margin-left: 85px;
+	margin-top: 40px;
 }

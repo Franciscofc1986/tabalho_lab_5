@@ -1,24 +1,34 @@
-var form=document.formulario;
-var nome='';
-var senha='';
-function validar(){
-	nome=form.nome.value;
-	senha=form.senha_user.value;
-	if(nome=="admin"&&senha=="admin"){
-		alert("bem vindo " +nome+"!")
-		window.open('pagina_inicial/pagina_inicial.html','_blank');
-		window.close('this');
+function validaLogin(){
+ 
+  if($("#login").val() == ""){
+    alert("Informe o login!"); 
+    login.focus(); 
+    return; 
+  }
+  else if($("#senha").val() == ""){
+    alert("Informe a senha!");
+    senha.focus();
+    return;
+  }
+ 
+  else{
+    buscar();
+  } 
+}
 
-		//window.open('frame/frame_principal.html','_parent');
-	}
-	else{
-		if(nome!="admin")
-		{
-			alert("usuário "+nome+" não autorizado!")
-		}
-		else
-		{
-			alert("senha não confere")
-		}
-	}
+ function buscar(){
+      $.getJSON('php/buscar_usuario.php', function (dados){
+       if (dados.length>0){ 
+       for($i=0; $i< dados.length; $i++){
+        if($('#login').val() == dados[$i].login && $('#senha').val() == dados[$i].senha){
+            alert('Bem vindo!');
+            window.location='pagina_inicial/pagina_inicial.html';
+        }else{
+          alert('Usuário e/ou senha incorretos!')
+        }
+       }
+      }else{
+        alert('Não existe usuário cadastrado no sistema!');
+      }
+  });
 }

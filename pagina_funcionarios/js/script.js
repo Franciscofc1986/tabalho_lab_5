@@ -31,38 +31,30 @@ function login(){
 	//else (alert('OK, esta janela não será fechada ainda.'))
 }
 
-$('#campo_nome').blur(function(){
-  if ($('#campo_nome').val().length<4){
-    alert("Preencha o nome do Funcionário corretamente.");
-   $('#campo_nome').focus();
-    }
-});
-
-$(document).ready (function() {
- $('#formulario').submit(function(){
-
-    //dados a enviar, vai buscar os valores dos campos que queremos  enviar para a BD
+function inserir_registo(){
+ 
+    //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
     var dadosajax = {
-
-      'nome' : $("#campo_nome").val(),     
-      'admissao' : $("#campo_admissao").val(),
-      'telefone' : $("#campo_telefone").val(),
-      'sexo' : $("#campo_sexo option:selected").text(),
-      'cpf' : $("#campo_cpf").val(),	      
-      'rg' : $("#campo_rg").val(),	      
-      'pis' : $("#campo_pis").val(),
-      'funcao' : $("#campo_funcao").val(),
-      'setor' : $("#campo_setor").val(),
-      'salario' : $("#campo_salario").val(),
-      'vale_transporte' : $("#campo_vale_transporte").val(),
-      'insalubridade'   : $("#campo_insalubridade").val(),
-      'periculosidade'  : $("#campo_periculosidade").val(),
+      
+          'nome' : $("#campo_nome").val(),     
+          'admissao' : $("#campo_admissao").val(),
+        'telefone' : $("#campo_telefone").val(),
+        'sexo' : $("#campo_sexo").val(),
+        'cpf' : $("#campo_cpf").val(),        
+        'rg' : $("#campo_rg").val(),        
+        'pis' : $("#campo_pis").val(),
+        'funcao' : $("#campo_funcao").val(),
+        'setor' : $("#campo_setor").val(),
+        'salario' : $("#campo_salario").val(),
+        'vale_transporte' : $("#campo_vale_transporte").val(),
+        'insalubridade'   : $("#campo_insalubridade").val(),
+        'periculosidade'  : $("#campo_periculosidade").val(),
     };
     pageurl = 'php/cadastrar_funcionario.php';
     //para consultar mais opcoes possiveis numa chamada ajax
     //http://api.jquery.com/jQuery.ajax/
     $.ajax({
-
+ 
         //url da pagina
         url: pageurl,
         //parametros a passar
@@ -74,7 +66,7 @@ $(document).ready (function() {
         //se ocorrer um erro na chamada ajax, retorna este alerta
         //possiveis erros: pagina nao existe, erro de codigo na pagina, falha de comunicacao/internet, etc etc etc
         error: function(){
-          alert('Erro: Inserir Registo!!');
+            alert('Erro: Inserir Registo!!');
         },
         //retorna o resultado da pagina para onde enviamos os dados
         success: function(result)
@@ -82,59 +74,41 @@ $(document).ready (function() {
             //se foi inserido com sucesso
             if($.trim(result) != '1')
             {
-              alert("Funcionário inserido com sucesso!");
-              document.getElementById('campo_nome').value="";
-              document.getElementById('campo_admissao').value="";
-              document.getElementById('campo_telefone').value="";
-              document.getElementById('campo_sexo').value="";
-              document.getElementById('campo_cpf').value="";
-              document.getElementById('campo_rg').value="";
-              document.getElementById('campo_pis').value="";
-              document.getElementById('campo_funcao').value="";
-              document.getElementById('campo_setor').value="";
-              document.getElementById('campo_salario').value="";
-              document.getElementById('campo_vale_transporte').value="";
-              document.getElementById('campo_insalubridade').value="";
-              document.getElementById('campo_periculosidade').value="";
+         alert("Funcionário inserido com sucesso!");
+               document.getElementById('campo_nome').value="";
+               document.getElementById('campo_admissao').value="";
+               document.getElementById('campo_telefone').value="";
+               document.getElementById('campo_sexo').value="";
+               document.getElementById('campo_cpf').value="";
+               document.getElementById('campo_rg').value="";
+               document.getElementById('campo_pis').value="";
+               document.getElementById('campo_funcao').value="";
+               document.getElementById('campo_setor').value="";
+               document.getElementById('campo_salario').value="";
+               document.getElementById('campo_vale_transporte').value="";
+               document.getElementById('campo_insalubridade').value="";
+               document.getElementById('campo_periculosidade').value="";
             }
             //se foi um erro
             else
             {
              alert("Não foi possível inserir o Funcionário!");
-             document.getElementById('campo_nome').value="";
-             document.getElementById('campo_admissao').value="";
-             document.getElementById('campo_telefone').value="";
-             document.getElementById('campo_sexo').value="";
-             document.getElementById('campo_cpf').value="";
-             document.getElementById('campo_rg').value="";
-             document.getElementById('campo_pis').value="";
-             document.getElementById('campo_funcao').value="";
-             document.getElementById('campo_setor').value="";
-             document.getElementById('campo_salario').value="";
-             document.getElementById('campo_vale_transporte').value="";
-             document.getElementById('campo_insalubridade').value="";
-             document.getElementById('campo_periculosidade').value="";
-           }
-
-         }
-       });
-});
-});
-
-function IsNum(v){
-   var ValidChars = "0123456789";
-   var IsNumber=true;
-   var Char;
-
+              document.getElementById('campo_nome').value="";
+               document.getElementById('campo_admissao').value="";
+               document.getElementById('campo_telefone').value="";
+               document.getElementById('campo_sexo').value="";
+               document.getElementById('campo_cpf').value="";
+               document.getElementById('campo_rg').value="";
+               document.getElementById('campo_pis').value="";
+               document.getElementById('campo_funcao').value="";
+               document.getElementById('campo_setor').value="";
+               document.getElementById('campo_salario').value="";
+               document.getElementById('campo_vale_transporte').value="";
+               document.getElementById('campo_insalubridade').value="";
+               document.getElementById('campo_periculosidade').value="";
+            }
  
-   for (i = 0; i < v.length && IsNumber == true; i++) 
-      { 
-      Char = v.charAt(i); 
-      if (ValidChars.indexOf(Char) == -1) 
-         {
-         IsNumber = false;
-         }
-      }
-   return IsNumber;
-   
+        }
+    });
 }
+ 

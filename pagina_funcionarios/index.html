@@ -50,21 +50,20 @@
 		<a href="javascript:void();" onclick="login()" id ="item7" class="top_link"><span>Logout</span></a>
 	</li>
 	</div>
-<form action="" id="formulario" name="formulario" method="post">
 	<div id="informacao_funcionarios">
 		<label id="titles">Controle de Funcionários</label>
 	<div class="campos">
 	<div id = "nome">
 		<label class="inputs">Nome:</label>
-			<input type="text" id="campo_nome" required="required" />
+			<input type="text" id="campo_nome" required="required" onblur="ver_tam('campo_nome','Nome')"/>
 	</div>
 	<div id = "admissao">
 		<label class="inputs">Admissão:</label>
-			<input type="text" id="campo_admissao" required="required" />
+			<input type="text" id="campo_admissao" required="required" onblur="validaDat(this,this.value)"/>
 	</div>		
 	<div id = "tel">
 		<label class="inputs">Tel.:</label>
-			<input type="text" id="campo_telefone" required="required" />
+			<input type="text" id="campo_telefone" required="required" onblur="ver_num('campo_telefone','telefone')"/>
 	</div>
 	<div id = "sexo">
 		<label class="inputs">Sexo: </label>
@@ -75,52 +74,57 @@
 	</div>
 	<div id = "cpf">
 		<label class="inputs">CPF:</label>
-			<input type="text" id="campo_cpf" required="required" />
+			<input type="text" id="campo_cpf" required="required" onblur="ver_num('campo_cpf','CPF')"/>
 	</div>
 	<div id = "rg">
 		<label class="inputs">RG:</label>
-			<input type="text" id="campo_rg" required="required" />
+			<input type="text" id="campo_rg" required="required" onblur="ver_num('campo_rg','RG')"/>
 	</div>
 	<div id = "pis">
 		<label class="inputs">PIS:</label>
-			<input type="text" id="campo_pis" required="required" />
+			<input type="text" id="campo_pis" required="required" onblur="ver_num('campo_pis','PIS')"/>
 	</div>
 	<div id = "funcao">
 		<label class="inputs">Função:</label>
-			<input type="text" id="campo_funcao" required="required" />
+			<input type="text" id="campo_funcao" required="required" onblur="ver_tam('campo_funcao','Função')"/>
 	</div>
 	<div id = "setor">
 		<label class="inputs">Setor:</label>
-			<input type="text" id="campo_setor" required="required" />
+			<input type="text" id="campo_setor" required="required" onblur="ver_tam('campo_setor','Setor')"/>
 	</div>
 	<div id = "salario">
 		<label class="inputs">Salário:</label>
-			<input type="text" id="campo_salario" required="required" />
+			<input type="text" id="campo_salario" required="required" onblur="ver_num('campo_salario','Salário')"/>
 	</div>
 	<div id = "vale">
 		<label class="inputs">Vale-Transporte:</label>
-			<input type="text" id="campo_vale_transporte" required="required" />
+			<input type="text" id="campo_vale_transporte" required="required" onblur="ver_num('campo_vale_transporte','Vale-Transporte')"/>
 	</div>
 	<div id = "insalubridade">
 		<label class="inputs">Insalubridade:</label>
-			<input type="text" id="campo_insalubridade" required="required" />
+			<input type="text" id="campo_insalubridade" required="required" onblur="ver_num('campo_insalubridade','Insalubridade')"/>
 	</div>
 	<div id = "periculosidade">
 		<label class="inputs">Periculosidade:</label>
-			<input type="text" id="campo_periculosidade" required="required" />
+			<input type="text" id="campo_periculosidade" required="required" onblur="ver_num('campo_periculosidade','Periculosidade')"/>
 	</div>
 	</div>
 	
 	<div class="botoes">
-		<input type="submit" value="Incluir"/>
+		<input type="submit" value="Incluir" onclick="inserir_registo()"/>
 	</div>
 	</div>
-</form>
+	<script type="text/javascript" src="../scripts/validar_campos.js"></script>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 <footer>
 	<div id="links">Links Importantes:</div>
+	<a href="http://www.rais.gov.br/" target="parent"><img class="links_d" id="rais" src="../css/images/rais.jpg" /></a>
+	<a href="http://www.receita.fazenda.gov.br/" target="parent"><img class="links_d" id="receita_federal" src="../css/images/receita_federal.jpg"></a>
+	<a href="http://www1.caixa.gov.br/download/index.asp" target="parent"><img class="links_d" id="logo_caixa" src="../css/images/logo_caixa.jpg"></a>
+	<a href="http://portal.mte.gov.br/portal-mte/" target="parent"><img class="links_d" id="m_trabalho" src="../css/images/m_trabalho.jpg"></a>
+	<a href="http://www.mpas.gov.br/" target="parent"><img class="links_d" id="previdencia" src="../css/images/previdencia.jpg"></a>
 </footer>
 </html>

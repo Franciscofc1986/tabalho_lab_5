@@ -54,7 +54,7 @@
 	<div class="campos">
 	<div id = "nome">
 		<label class="inputs">Nome Fantasia:</label>
-			<input type="text" name="n_fantasia" id="campo_nome_fantasia" required="required" />
+			<input type="text" name="n_fantasia" id="campo_nome_fantasia" required="required" onblur="ver_tam('campo_nome_fantasia','Nome Fantasia')"/>
 	</div>
 	<div id = "codigo">
 		<label class="inputs">Código:</label>
@@ -62,35 +62,35 @@
 	</div>
 	<div id = "razao_social">
 		<label class="inputs">Razão Social:</label>
-			<input type="text" name="r_social" id="campo_razao_social" required="required" />
+			<input type="text" name="r_social" id="campo_razao_social" required="required" onblur="ver_tam('campo_razao_social','Razão Social')"/>
 	</div>
 	<div id = "cnpj">
 		<label class="inputs">CNPJ:</label>
-			<input type="text" name="cnpj_txt" id="campo_cnpj" required="required" />
+			<input type="text" name="cnpj_txt" id="campo_cnpj" required="required" onblur="ver_num('campo_cnpj','CNPJ')"/>
 	</div>
 	<div id = "ie">
 		<label class="inputs">I.E:</label>
-			<input type="text" name="insc_est" id="campo_ie" required="required" />
+			<input type="text" name="insc_est" id="campo_ie" required="required" onblur="ver_num('campo_ie','inscrição estadual')"/>
 	</div>
 	<div id = "tel">
 		<label class="inputs">Tel.:</label>
-			<input type="text" name="tel" id="campo_telefone" required="required" />
+			<input type="text" name="tel" id="campo_telefone" required="required" onblur="ver_num('campo_telefone','Telefone')"/>
 	</div>
 	<div id = "logradouro">
 		<label class="inputs">Logradouro:</label>
-			<input type="text" name="endereco" id="campo_logradouro" required="required" />
+			<input type="text" name="endereco" id="campo_logradouro" required="required" onblur="ver_tam('campo_logradouro','Logradouro')"/>
 	</div>
 	<div id = "num">
 		<label class="inputs">Nº:</label>
-			<input type="text" name="numero" id="campo_num" required="required" />
+			<input type="text" name="numero" id="campo_num" required="required" onblur="ver_num('campo_num','Nº')"/>
 	</div>
 	<div id = "bairro">
 		<label class="inputs">Bairro:</label>
-			<input type="text"  name="bairr" id="campo_bairro" required="required" />
+			<input type="text"  name="bairr" id="campo_bairro" required="required" onblur="ver_tam('campo_bairro','Bairro')"/>
 	</div>
 	<div id = "cidade">
 		<label class="inputs">Cidade:</label>
-			<input type="text" name="cid" id="campo_cidade" required="required"/>
+			<input type="text" name="cid" id="campo_cidade" required="required" onblur="ver_tam('campo_cidade','Cidade')"/>
 	</div>
 	<div id = "uf">
 		<label class="inputs">UF:</label>
@@ -111,7 +111,7 @@
 	</div>
 	</div>
 
-	<script type="text/javascript" src="js/empresas.js"></script>
+	<script type="text/javascript" src="../scripts/validar_campos.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/procura_cep.js"></script>
@@ -121,5 +121,10 @@
 
 <footer>
 	<div id="links">Links Importantes:</div>
+	<a href="http://www.rais.gov.br/" target="parent"><img class="links_d" id="rais" src="../css/images/rais.jpg" /></a>
+	<a href="http://www.receita.fazenda.gov.br/" target="parent"><img class="links_d" id="receita_federal" src="../css/images/receita_federal.jpg"></a>
+	<a href="http://www1.caixa.gov.br/download/index.asp" target="parent"><img class="links_d" id="logo_caixa" src="../css/images/logo_caixa.jpg"></a>
+	<a href="http://portal.mte.gov.br/portal-mte/" target="parent"><img class="links_d" id="m_trabalho" src="../css/images/m_trabalho.jpg"></a>
+	<a href="http://www.mpas.gov.br/" target="parent"><img class="links_d" id="previdencia" src="../css/images/previdencia.jpg"></a>
 </footer>
 </html>

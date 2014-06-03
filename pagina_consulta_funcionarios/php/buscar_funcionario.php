@@ -12,10 +12,10 @@ mysqli_select_db($conexao,$banco) or die(mysql_error());
 // Verifica se a variável está vazia
 
 if (empty($nome)) {
-$sql = "SELECT * FROM funcionarios";
+$sql = "SELECT * FROM funcionarios ORDER BY nome ASC" ;
 } else {
 	$nome .= "%";
-        $sql = "SELECT * FROM funcionarios WHERE nome like '$nome'";
+        $sql = "SELECT * FROM funcionarios WHERE nome like '$nome' ORDER BY nome ASC";
     }
 $result = mysqli_query($conexao,$sql);
     $cont = mysqli_affected_rows($conexao);

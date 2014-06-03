@@ -62,39 +62,39 @@
 	</div>		
 	<div id = "dias_uteis">
 		<label class="inputs">Dias úteis do mês:</label>
-			<input type="text" id = "campo_dias_uteis" required="required" />
+			<input type="text" id = "campo_dias_uteis" onblur="ver_num('campo_dias_uteis','>Dias F.D.S. do mês')" required="required" />
 	</div>
 	<div id = "fds">
 		<label class="inputs">Dias F.D.S. do mês:</label>
-			<input type="text" id = "campo_fds" required="required" />
+			<input type="text" id = "campo_fds" onblur="ver_num('campo_fds','CNPJ')" required="required" />
 	</div>
 	<div id = "hora_extra_normal">
 		<label class="inputs">Hora extra normal:</label>
-			<input type="text" id = "campo_hora_extra_normal" required="required" />
+			<input type="text" id = "campo_hora_extra_normal" onblur="ver_num('campo_hora_extra_normal','Hora extra normal')" required="required" />
 	</div>
 	<div id = "hora_extra_fds">
 		<label class="inputs">Hora extra F.D.S.:</label>
-			<input type="text" id = "campo_hora_extra_fds" required="required" />
+			<input type="text" id = "campo_hora_extra_fds" onblur="ver_num('campo_hora_extra_fds','Hora extra F.D.S.')" required="required" />
 	</div>
 	<div id = "falta_normal">
 		<label class="inputs">Falta normal:</label>
-			<input type="text" id = "campo_falta_normal" required="required" />
+			<input type="text" id = "campo_falta_normal" onblur="ver_num('campo_falta_normal','Falta normal')"required="required" />
 	</div>
 	<div id = "falta_fds">
 		<label class="inputs">Falta FDS:</label>
-			<input type="text" id = "campo_falta_fds" required="required" />
+			<input type="text" id = "campo_falta_fds" onblur="ver_num('campo_falta_fds','Falta FDS')" required="required" />
 	</div>
 	<div id = "add_noturno">
 		<label class="inputs">Adicional Noturno:</label>
-			<input type="text" id = "campo_add_noturno" required="required" />
+			<input type="text" id = "campo_add_noturno" onblur="ver_num('campo_add_noturno','Adicional Noturno')" required="required" />
 	</div>
 	<div id = "dependentes">
 		<label class="inputs">Nº de Dependentes:</label>
-			<input type="text" id = "campo_dependentes" required="required" />
+			<input type="text" id = "campo_dependentes" onblur="ver_num('campo_dependentes','Nº de Dependentes')" required="required" />
 	</div>
 	<div id = "adiantamento">
 		<label class="inputs">Adiantamento:</label>
-			<input type="text" id = "campo_adiantamento" required="required" />
+			<input type="text" id = "campo_adiantamento" onblur="ver_num('campo_adiantamento','Adiantamento')" required="required" />
 	</div>
 
 	<div class="botoes">
@@ -102,7 +102,8 @@
 	</div>
 	</div>
 	</div>
-
+	
+	<script type="text/javascript" src="../scripts/validar_campos.js"></script>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	
@@ -110,5 +111,10 @@
 
 <footer>
 	<div id="links">Links Importantes:</div>
+	<a href="http://www.rais.gov.br/" target="parent"><img class="links_d" id="rais" src="../css/images/rais.jpg" /></a>
+	<a href="http://www.receita.fazenda.gov.br/" target="parent"><img class="links_d" id="receita_federal" src="../css/images/receita_federal.jpg"></a>
+	<a href="http://www1.caixa.gov.br/download/index.asp" target="parent"><img class="links_d" id="logo_caixa" src="../css/images/logo_caixa.jpg"></a>
+	<a href="http://portal.mte.gov.br/portal-mte/" target="parent"><img class="links_d" id="m_trabalho" src="../css/images/m_trabalho.jpg"></a>
+	<a href="http://www.mpas.gov.br/" target="parent"><img class="links_d" id="previdencia" src="../css/images/previdencia.jpg"></a>
 </footer>
 </html>
