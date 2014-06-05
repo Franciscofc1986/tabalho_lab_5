@@ -34,6 +34,14 @@ function login(){
 	//else (alert('OK, esta janela não será fechada ainda.'))
 }
 
+function campos(){
+  if($('#campo_nome').val() == "" || $("#campo_admissao").val() == "" || $("#campo_telefone").val() == "" || $("#campo_cpf").val() == "" || $("#campo_rg").val() == "" || $("#campo_pis").val() == "" || $("#campo_funcao").val() == "" || $("#campo_setor").val() == "" || $("#campo_salario").val() == "" || $("#campo_vale_transporte").val() == "" || $("#campo_insalubridade").val() == ""){
+    alert('Por favor, preencha todos os campos!');
+  }else{
+    validar();
+  }
+}
+
 function validar(){
     $.getJSON('php/buscar_emitente.php', function (dados){
        if (dados.length < 1){   
@@ -54,7 +62,7 @@ function inserir_registo(){
           'nome' : $("#campo_nome").val(),     
           'admissao' : $("#campo_admissao").val(),
         'telefone' : $("#campo_telefone").val(),
-        'sexo' : $("#campo_sexo").val(),
+        'sexo' : $("#campo_sexo option:selected").text(),
         'cpf' : $("#campo_cpf").val(),        
         'rg' : $("#campo_rg").val(),        
         'pis' : $("#campo_pis").val(),

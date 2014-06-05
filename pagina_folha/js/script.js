@@ -54,6 +54,34 @@ function buscar_funcionarios(){
     });
   }
 
+function campos(){
+  if($("#campo_competencia").val() == "" || $("#campo_dias_uteis").val() == "" || $("#campo_fds").val() == "" || $("#campo_hora_extra_normal").val() == "" || $("#campo_hora_extra_fds").val() == "" || $("#campo_falta_normal").val() == "" || $("#campo_falta_fds").val() == "" || $("#campo_add_noturno").val() == "" || $("#campo_dependentes").val() == "" || $("#campo_adiantamento").val() == ""){
+    alert('Por favor, preencha todos os campos!');
+  }else{
+    validar_funcionario();
+  }
+}
+
+function validar_funcionario(){
+  $.getJSON('php/buscar_funcionario.php', function (dados){
+       if (dados.length < 1){   
+        alert('Não existe nenhum funcionário cadastrado no sistema!');
+       }else{
+        validar_emitente();
+       }
+    });
+  }
+
+function validar_emitente(){
+ $.getJSON('php/buscar_emitente.php', function (dados){
+       if (dados.length < 1){   
+        alert('Não existe nenhum emitente cadastrado no sistema!');
+       }else{
+        validar_combobox();
+       }
+    });
+}
+
 function validar_combobox(){
   if($("#combobox_funcionarios option:selected").text()=="Selecione o Funcinário..."){
       alert('Por Favor, Selecione um Funcionário!');
@@ -61,7 +89,6 @@ function validar_combobox(){
     gerar_folha();
   }
 }
-
 
 function gerar_folha(){
  

@@ -33,14 +33,23 @@ function login(){
 		window.location = '../index.html';
 	//else (alert('OK, esta janela não será fechada ainda.'))
 }
+
 function validar(){
     $.getJSON('php/buscar_emitente.php', function (dados){
        if (dados.length > 0){   
           alert('Já existe um emitente cadastrado no sistema! Caso necessário, edite o existente!');
        }else{
-         inserir_registro();
+         campos();
        }
     });
+}
+
+function campos(){
+  if($("#campo_nome_fantasia").val() == "" || $("#campo_razao_social").val() == "" || $("#campo_cnpj").val() == "" || $("#campo_ie").val() == ""|| $("#campo_telefone").val() == "" ||$("#campo_logradouro").val() == "" || $("#campo_num").val() == "" || $("#campo_bairro").val() == "" || $("#campo_cidade").val() == "" ||$("#campo_uf").val() == "" || $("#campo_cep").val() == "" || $("#campo_email").val() == ""){
+    alert('Por favor, preencha todos os campos!');
+  }else{
+    inserir_registro();
+  }
 }
 function inserir_registro(){
     var dadosajax = {

@@ -26,20 +26,6 @@ function pagina_recibo(){
   window.location = '../pagina_recibo/index.html';
 }
 
-function carrega_competencia(){
-	competencia = prompt('Digite a competência:');
-	if (competencia==null){
-		//alert("voltando!");
-		window.history.back();
-	}
-	else{
-    	if(competencia.length>0){
-    	form.campo_competencia.value=competencia;
-		}
-	}
-
-}
-
 function relatorio(){
   window.location = '../pagina_relatorio_gerencial/index.html';
 }
@@ -60,3 +46,41 @@ function voltar(){
 		pagina_principal();
 }
 
+
+function validar_emitente(){
+ $.getJSON('php/buscar_emitente.php', function (dados){
+       if (dados.length < 1){   
+        alert('Não existe nenhum emitente cadastrado no sistema!');
+        window.history.back();
+       }else{
+        validar_funcionario();
+       }
+    });
+}
+
+
+function validar_funcionario(){
+  $.getJSON('php/buscar_funcionario.php', function (dados){
+       if (dados.length < 1){   
+        alert('Não existe nenhum funcionário cadastrado no sistema!');
+        window.history.back();
+       }else{
+        carrega_competencia();
+       }
+    });
+  }
+
+
+function carrega_competencia(){
+	competencia = prompt('Digite a competência:');
+	if (competencia==null){
+		//alert("voltando!");
+		window.history.back();
+	}
+	else{
+    	if(competencia.length>0){
+    	form.campo_competencia.value=competencia;
+		}
+	}
+
+}
