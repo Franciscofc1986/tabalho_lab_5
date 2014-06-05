@@ -34,9 +34,15 @@ function login(){
 	//else (alert('OK, esta janela não será fechada ainda.'))
 }
 
-/**
-  * Função para criar um objeto XMLHTTPRequest
-  */
+function validar(){
+    $.getJSON('php/validar_folha.php', function (dados){
+       if (dados.length < 1){   
+          alert('Não existe nenhuma folha cadastrada no sistema! Por favor, volte e cadastre!');
+           window.history.back();
+       }
+    });
+}
+
  function CriaRequest() {
      try{
          request = new XMLHttpRequest();        
@@ -146,7 +152,9 @@ function marcar_para_editar(){
 
 function editar_registro(){
  
-    //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
+     if (jQuery("input[name='marcar']:checked").length<1){
+        alert('Por favor, selecione um registro para editar!');
+    }else{
     var dadosajax = {
       
           'id' : $(".selecionado #campo_id").text(),
@@ -200,10 +208,13 @@ function editar_registro(){
         }
     });
 }
+}
 
 function deletar_registro(){
  
-    //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
+     if (jQuery("input[name='marcar']:checked").length<1){
+        alert('Por favor, selecione um registro para deletar!');
+    }else{
     var dadosajax = {
       
            'id' : $(".selecionado #campo_id").text(),
@@ -245,4 +256,5 @@ function deletar_registro(){
  
         }
     });
+}
 }

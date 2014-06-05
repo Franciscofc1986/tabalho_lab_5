@@ -142,7 +142,9 @@ function marcar_para_editar(){
 
 function editar_registro(){
  
-    //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
+    if (jQuery("input[name='marcar']:checked").length<1){
+        alert('Por favor, selecione o usuário para editar!');
+    }else{
     var dadosajax = {
       
           'id' : $(".selecionado #campo_id").text(),
@@ -186,4 +188,5 @@ function editar_registro(){
  
         }
     });
+}
 }

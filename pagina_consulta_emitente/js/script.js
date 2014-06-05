@@ -34,6 +34,15 @@ function login(){
 	//else (alert('OK, esta janela não será fechada ainda.'))
 }
 
+function validar(){
+    $.getJSON('php/verificar_emitente.php', function (dados){
+       if (dados.length < 1){   
+          alert('Não existe nenhum emitente cadastrado no sistema! Por favor, volte e cadastre!');
+           window.history.back();
+       }
+    });
+}
+
 function CriaRequest() {
      try{
          request = new XMLHttpRequest();        
@@ -142,6 +151,10 @@ function marcar_para_editar(){
 
 
 function editar_registro(){
+
+    if (jQuery("input[name='marcar']:checked").length<1){
+        alert('Por favor, selecione um emitente para editar!');
+    }else{
  
     //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
     var dadosajax = {
@@ -198,4 +211,5 @@ function editar_registro(){
  
         }
     });
+}
 }
