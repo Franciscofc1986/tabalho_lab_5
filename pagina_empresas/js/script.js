@@ -33,7 +33,15 @@ function login(){
 		window.location = '../index.html';
 	//else (alert('OK, esta janela não será fechada ainda.'))
 }
-
+function validar(){
+    $.getJSON('php/buscar_emitente.php', function (dados){
+       if (dados.length > 0){   
+          alert('Já existe um emitente cadastrado no sistema! Caso necessário, edite o existente!');
+       }else{
+         inserir_registro();
+       }
+    });
+}
 function inserir_registro(){
     var dadosajax = {
       

@@ -34,6 +34,18 @@ function login(){
 	//else (alert('OK, esta janela não será fechada ainda.'))
 }
 
+function validar(){
+    $.getJSON('php/buscar_emitente.php', function (dados){
+       if (dados.length < 1){   
+          alert('Não existe nenhum emitente cadastrado no sistema! Por favor, cadastre o emitente!');
+       }else{
+         if (dados.length > 0){
+          inserir_registo();
+         }
+       }
+    });
+}
+
 function inserir_registo(){
  
     //dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
