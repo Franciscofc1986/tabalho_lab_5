@@ -389,3 +389,57 @@ $("#campo_referencia_salario").val('30');
       var sub = (venc-desc);
       return sub.toFixed(2);
     }
+
+    function inserir_registro(){
+    var dadosajax = {
+      
+        'campo_emitente' : $("#campo_emitente").val(),
+        'competencia' : $("#campo_competencia").val(),
+        'salario_normal' : $("#campo_vencimento_salario").val(),
+        'insalubrid' : $("#campo_vencimento_insalubridade").val(),
+        'periculosid' : $("#campo_vencimento_periculosidade").val(),  
+        'add_not' : $("#campo_vencimento_add_noturno").val(), 
+        'hora_extra' : $("#campo_vencimento_h_extra").val(),
+        'hora_fimds' : $("#campo_vencimento_h_fds").val(),
+        'salar_familia' : $("#campo_vencimento_salario_familia").val(),
+        'dsr_remunerado' : $("#campo_vencimento_dsr_rem").val(),
+        'inss' : $("#campo_calculo_inss").val(),
+        'faltass' : $("#campo_calculo_faltas").val(),
+        'imposto' : $("#campo_calculo_ir").val(),
+        'adiantament' : $("#campo_desconto_adiantamento").val(),
+        'vale_trans' : $("#campo_desconto_vale_transporte").val(),
+
+
+    };
+    pageurl = 'php/cadastrar_recibo.php';
+    //para consultar mais opcoes possiveis numa chamada ajax
+    //http://api.jquery.com/jQuery.ajax/
+    $.ajax({
+ 
+        //url da pagina
+        url: pageurl,
+        //parametros a passar
+        data: dadosajax,
+        //tipo: POST ou GET
+        type: 'POST',
+        //cache
+        cache: false,
+        //se ocorrer um erro na chamada ajax, retorna este alerta
+        //possiveis erros: pagina nao existe, erro de codigo na pagina, falha de comunicacao/internet, etc etc etc
+        error: function(){
+            alert('Erro: Inserir Registo!!');
+        },
+        //retorna o resultado da pagina para onde enviamos os dados
+        success: function(result)
+        {
+            //se foi inserido com sucesso
+            if($.trim(result) != '1')
+            {
+            alert("Recibo inserido com sucesso!");
+            folha();
+            } else{
+              alert('Falha ao salvar o recibo!');
+          }
+      }
+    });
+  }

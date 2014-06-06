@@ -50,17 +50,16 @@
 		<a href="javascript:void();" onclick="login()" id ="item7" class="top_link"><span>Logout</span></a>
 	</li>
 	</div>
-	<form name="formulario">
 	<div id="informacao_folha">
 		<label id="titles">Relatório Gerencial - Pagamento de Empregados</label>
 	<div class="campos">
 	<div id = "competencia">
 		<label class="inputs">Competência:</label>
-			<input type="text" name = "campo_competencia" required="required" />
+			<input type="text" id = "campo_competencia" required="required" />
 	</div>
 	<div id = "emitente">
 		<label class="inputs">Emitente:</label>
-			<input type="text" id = "campo_dias_uteis" required="required" />
+			<input type="text" id = "campo_emitente" required="required" />
 	</div>
 	
 	<br>
@@ -81,15 +80,15 @@
 	</div>
 
 	<div class="campos_proventos">
-		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
+		<br><input id="campo_salario_normal" type="text" required="required" /></br>
+		<br><input id="campo_insalubridade" type="text" required="required" /></br>
+		<br><input id="campo_periculosidade" type="text" required="required" /></br>
+		<br><input id="campo_add_noturno" type="text" required="required" /></br>
+		<br><input id="campo_horas_extra" type="text" required="required" /></br>
+		<br><input id="campo_horas_fds" type="text" required="required" /></br>
+		<br><input id="campo_salario_familia" type="text" required="required" /></br>
+		<br><input id="campo_dsr" type="text" required="required" /></br>
+		<br><input id="campo_total_proventos" type="text" required="required" /></br>
 	</div>
 
 	<div class="labels_descontos">
@@ -101,16 +100,16 @@
 	</div>
 
 	<div class="campos_descontos">
-		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
-		<br><input type="text" required="required" /></br>
+		<br><input id="campo_inss" type="text" required="required" /></br>
+		<br><input id="campo_faltas" type="text" required="required" /></br>
+		<br><input id="campo_ir" type="text" required="required" /></br>
+		<br><input id="campo_adiantamentos" type="text" required="required" /></br>
+		<br><input id="campo_vale_transporte" type="text" required="required" /></br>
 	</div>
 
 	<div id="total">
 		<label>Total de Descontos:</label>
-		<input type="text" required="required" />
+		<input id="campo_total_descontos" type="text" required="required" />
 	</div>
 
 	<br><label id="separator1">___________________________________________________________________________________________________________________</label></br>
@@ -136,7 +135,6 @@
 	</div>
 	</div>
 </div>
-</form>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
