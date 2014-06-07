@@ -174,16 +174,13 @@ body{
 }
 
 #total_pagar{
-	margin-left: 20px;
+	margin-left: 150px;
 }
 #total_funcionarios{
 	margin-top: -22px;
-	margin-left: 340px
+	margin-left: 490px
 }
-#fgts{
-	margin-top: -22px;
-	margin-left: 670px
-}
+
 .botoes{
 	margin-top: 5%;	
 	margin-left: 45%;

@@ -49,20 +49,20 @@ $result = mysqli_query($conexao,$sql);
         $return = "$tabela";
         // Captura os dados da consulta e inseri na tabela HTML
         while ($linha = mysqli_fetch_array($result)) {
-            $return.= "<td id='campo_id' style='display:none'>" . utf8_encode($linha["id"]) . "</td>";
-            $return.= "<td id='campo_nome_fantasia'>" . utf8_encode($linha["nome_fantasia"]) . "</td>";
-            $return.= "<td id='campo_codigo'>" . utf8_encode($linha["codigo"]) . "</td>";
-            $return.= "<td id='campo_razao_social'>" . utf8_encode($linha["razao_social"]) . "</td>";
-            $return.= "<td id='campo_cnpj'>" . utf8_encode($linha["cnpj"]) . "</td>";
-            $return.= "<td id='campo_ie'>" . utf8_encode($linha["ie"]) . "</td>";
-            $return.= "<td id='campo_telefone'>" . utf8_encode($linha["telefone"]) . "</td>";
-            $return.= "<td id='campo_logradouro'>" . utf8_encode($linha["logradouro"]) . "</td>";
-            $return.= "<td id='campo_num'>" . utf8_encode($linha["numero"]) . "</td>";
-            $return.= "<td id='campo_bairro'>" . utf8_encode($linha["bairro"]) . "</td>";
-            $return.= "<td id='campo_cidade'>" . utf8_encode($linha["cidade"]) . "</td>";
-            $return.= "<td id='campo_uf'>" . utf8_encode($linha["uf"]) . "</td>";
-            $return.= "<td id='campo_cep'>" . utf8_encode($linha["cep"]) . "</td>";
-            $return.= "<td id='campo_email'>" . utf8_encode($linha["email"]) . "</td>";
+            $return.= "<td id='campo_id' style='display:none'>" . ($linha["id"]) . "</td>";
+            $return.= "<td id='campo_nome_fantasia'>" . ($linha["nome_fantasia"]) . "</td>";
+            $return.= "<td id='campo_codigo'>" . ($linha["codigo"]) . "</td>";
+            $return.= "<td id='campo_razao_social'>" . ($linha["razao_social"]) . "</td>";
+            $return.= "<td id='campo_cnpj'>" . ($linha["cnpj"]) . "</td>";
+            $return.= "<td id='campo_ie'>" . ($linha["ie"]) . "</td>";
+            $return.= "<td id='campo_telefone'>" . ($linha["telefone"]) . "</td>";
+            $return.= "<td id='campo_logradouro'>" . ($linha["logradouro"]) . "</td>";
+            $return.= "<td id='campo_num'>" . ($linha["numero"]) . "</td>";
+            $return.= "<td id='campo_bairro'>" . ($linha["bairro"]) . "</td>";
+            $return.= "<td id='campo_cidade'>" . ($linha["cidade"]) . "</td>";
+            $return.= "<td id='campo_uf'>" . ($linha["uf"]) . "</td>";
+            $return.= "<td id='campo_cep'>" . ($linha["cep"]) . "</td>";
+            $return.= "<td id='campo_email'>" . ($linha["email"]) . "</td>";
             $return.= "<td>" . ($textbox) . "</td>";
             $return.= "</tr>";
            

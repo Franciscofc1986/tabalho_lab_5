@@ -17,7 +17,7 @@
 		<a href="#nogo2" id ="item2" class="top_link"><span class="down">Emitente</span></a>
 				<ul class="sub">
 					<li><a href="javascript:void();" onclick="empresas()">Cadastro...</a></li>
-					<li><a href="javascript:void();" onclick="buscar_emitentes()">Editar/Deletar...</a></li>
+					<li><a href="javascript:void();" onclick="buscar_emitentes()">Editar...</a></li>
 				</ul>
 			</li>
 			<li class="top">
@@ -55,7 +55,7 @@
 	<div class="campos">
 	<div id = "competencia">
 		<label class="inputs">Competência:</label>
-			<input type="text" id = "campo_competencia" required="required" />
+			<input type="text" id = "campo_competencia" placeholder="ex.: 01/2014" required="required" />
 	</div>
 	<div id = "funcionario">
 		<label class="inputs">Funcionário:</label>
@@ -63,39 +63,39 @@
 	</div>		
 	<div id = "dias_uteis">
 		<label class="inputs">Dias úteis do mês:</label>
-			<input type="text" id = "campo_dias_uteis" onblur="ver_num('campo_dias_uteis','Dias Úteis do mês')" required="required" />
+			<input type="text" id = "campo_dias_uteis" placeholder="Qtd." onblur="ver_num('campo_dias_uteis','Dias Úteis do mês')" required="required" />
 	</div>
 	<div id = "fds">
 		<label class="inputs">Dias F.D.S. do mês:</label>
-			<input type="text" id = "campo_fds" onblur="ver_num('campo_fds','Dias F.D.S.')" required="required" />
+			<input type="text" id = "campo_fds" placeholder="Qtd." onblur="ver_num('campo_fds','Dias F.D.S.')" required="required" />
 	</div>
 	<div id = "hora_extra_normal">
 		<label class="inputs">Hora extra normal:</label>
-			<input type="text" id = "campo_hora_extra_normal" onblur="ver_num('campo_hora_extra_normal','Hora extra normal')" required="required" />
+			<input type="text" id = "campo_hora_extra_normal" placeholder="ex.: 5" onblur="ver_num('campo_hora_extra_normal','Hora extra normal')" required="required" />
 	</div>
 	<div id = "hora_extra_fds">
 		<label class="inputs">Hora extra F.D.S.:</label>
-			<input type="text" id = "campo_hora_extra_fds" onblur="ver_num('campo_hora_extra_fds','Hora extra F.D.S.')" required="required" />
+			<input type="text" id = "campo_hora_extra_fds" placeholder="ex.: 5"  onblur="ver_num('campo_hora_extra_fds','Hora extra F.D.S.')" required="required" />
 	</div>
 	<div id = "falta_normal">
 		<label class="inputs">Falta normal:</label>
-			<input type="text" id = "campo_falta_normal" onblur="ver_num('campo_falta_normal','Falta normal')"required="required" />
+			<input type="text" id = "campo_falta_normal" placeholder="Qtd." onblur="ver_num('campo_falta_normal','Falta normal')"required="required" />
 	</div>
 	<div id = "falta_fds">
 		<label class="inputs">Falta FDS:</label>
-			<input type="text" id = "campo_falta_fds" onblur="ver_num('campo_falta_fds','Falta FDS')" required="required" />
+			<input type="text" id = "campo_falta_fds" placeholder="Qtd." onblur="ver_num('campo_falta_fds','Falta FDS')" required="required" />
 	</div>
 	<div id = "add_noturno">
 		<label class="inputs">Adicional Noturno:</label>
-			<input type="text" id = "campo_add_noturno" onblur="ver_num('campo_add_noturno','Adicional Noturno')" required="required" />
+			<input type="text" id = "campo_add_noturno" placeholder="ex.: 5" onblur="ver_num('campo_add_noturno','Adicional Noturno')" required="required" />
 	</div>
 	<div id = "dependentes">
 		<label class="inputs">Nº de Dependentes:</label>
-			<input type="text" id = "campo_dependentes" onblur="ver_num('campo_dependentes','Nº de Dependentes')" required="required" />
+			<input type="text" id = "campo_dependentes" placeholder="ex.: 2" onblur="ver_num('campo_dependentes','Nº de Dependentes')" required="required" />
 	</div>
 	<div id = "adiantamento">
 		<label class="inputs">Adiantamento:</label>
-			<input type="text" id = "campo_adiantamento" onblur="ver_num('campo_adiantamento','Adiantamento')" required="required" />
+			<input type="text" id = "campo_adiantamento" placeholder="ex.: 250" onblur="ver_num('campo_adiantamento','Adiantamento')" required="required" />
 	</div>
 
 	<div class="botoes">

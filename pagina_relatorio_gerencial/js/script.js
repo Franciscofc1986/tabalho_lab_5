@@ -64,8 +64,10 @@ function validar_funcionario(){
         alert('Não existe nenhum funcionário cadastrado no sistema!');
         window.history.back();
        }else{
+        $funcs = dados.length;
         carrega_competencia();
        }
+       insere_total_funcionarios($funcs);
     });
   }
 
@@ -147,6 +149,11 @@ function inserir_dados(valor_emitente, valor_salario_normal, valor_insalubridade
    $("#campo_adiantamentos").val(valor_adiantamentos.toFixed(2));
    $("#campo_vale_transporte").val(valor_vale_transporte.toFixed(2));
    $("#campo_total_descontos").val(calcula_total_descontos());
+   $("#total_pagar1").val('R$ '+ calcula_total_pagar());
+}
+
+function insere_total_funcionarios(funcs){
+$("#total_funcionarios1").val(funcs);
 }
 
 
@@ -171,5 +178,12 @@ function calcula_total_descontos(){
   var valor_vale_transporte = parseFloat($valor_vale_transporte);
 
   total = (valor_inss+valor_faltas+valor_ir+valor_adiantamentos+valor_vale_transporte);
+  return total.toFixed(2);
+}
+
+function calcula_total_pagar(){
+  var vencimentos = parseFloat($("#campo_total_proventos").val());
+  var descontos = parseFloat($("#campo_total_descontos").val());
+  var total = (vencimentos-descontos);
   return total.toFixed(2);
 }

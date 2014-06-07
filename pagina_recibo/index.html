@@ -17,7 +17,7 @@
 		<a href="#nogo2" id ="item2" class="top_link"><span class="down">Emitente</span></a>
 				<ul class="sub">
 					<li><a href="javascript:void();" onclick="empresas()">Cadastro...</a></li>
-					<li><a href="javascript:void();" onclick="buscar_emitentes()">Editar/Deletar...</a></li>
+					<li><a href="javascript:void();" onclick="buscar_emitentes()">Editar...</a></li>
 				</ul>
 			</li>
 			<li class="top">
@@ -56,23 +56,23 @@
 	<div class="campos">
 	<div id = "cnpj">
 		<label class="inputs">CNPJ:</label>
-			<input type="text" id = "campo_cnpj" required="required" />
+			<input type="text" id = "campo_cnpj" required="required" readonly="true"/>
 	</div>
 	<div id = "emitente">
 		<label class="inputs">Emitente:</label>
-			<input type="text" id = "campo_emitente" required="required" />
+			<input type="text" id = "campo_emitente" required="required" readonly="true"/>
 	</div>		
 	<div id = "competencia">
 		<label class="inputs">Competência:</label>
-			<input type="text" id = "campo_competencia" required="required" />
+			<input type="text" id = "campo_competencia" required="required" readonly="true"/>
 	</div>
 	<div id = "funcionario">
 		<label class="inputs">Funcionário:</label>
-			<input type="text" id = "campo_funcionario" required="required" />
+			<input type="text" id = "campo_funcionario" required="required" readonly="true"/>
 	</div>
 	<div id = "funcao">
 		<label class="inputs">Função:</label>
-			<input type="text" id = "campo_funcao" required="required" />
+			<input type="text" id = "campo_funcao" required="required" readonly="true"/>
 	</div>
 	<br />
 	<div id="descricao">
@@ -107,38 +107,38 @@
 	</div>
 
 	<div class="campos_referencia1">
-		<br><input id="campo_referencia_salario" type="text" required="required" /></br>
-		<br><input id="campo_referencia_insalubridade" type="text" required="required" /></br>
-		<br><input id="campo_referencia_periculosidade" type="text" required="required" /></br>
-		<br><input id="campo_referencia_add" type="text" required="required" /></br>
-		<br><input id="campo_referencia_hora_extra" type="text" required="required" /></br>
-		<br><input id="campo_referencia_fds" type="text" required="required" /></br>
-		<br><input id="campo_referencia_salario_familia" type="text" required="required" /></br>
+		<br><input id="campo_referencia_salario" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_referencia_insalubridade" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_referencia_periculosidade" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_referencia_add" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_referencia_hora_extra" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_referencia_fds" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_referencia_salario_familia" type="text" required="required" readonly="true"/></br>
 	</div>
 
 	<div class="campos_referencia2">
-		<br><input id="campo_referencia_faltas" type="text" required="required" /></br>
-		<br><input id="campo_referencia_vale_transporte" type="text" required="required" /></br>
-		<br><input id="campo_referencia_inss" type="text" required="required" /></br>
+		<br><input id="campo_referencia_faltas" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_referencia_vale_transporte" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_referencia_inss" type="text" required="required" readonly="true"/></br>
 	</div>
 
 	<div class="campos_vencimento">
-		<br><input id="campo_vencimento_salario" type="text" required="required" /></br>
-		<br><input id="campo_vencimento_insalubridade" type="text" required="required" /></br>
-		<br><input id="campo_vencimento_periculosidade" type="text" required="required" /></br>
-		<br><input id="campo_vencimento_add_noturno" type="text" required="required" /></br>
-		<br><input id="campo_vencimento_h_extra" type="text" required="required" /></br>
-		<br><input id="campo_vencimento_h_fds" type="text" required="required" /></br>
-		<br><input id="campo_vencimento_salario_familia"type="text" required="required" /></br>
-		<br><input id="campo_vencimento_dsr_rem"type="text" required="required" /></br>
+		<br><input id="campo_vencimento_salario" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_vencimento_insalubridade" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_vencimento_periculosidade" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_vencimento_add_noturno" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_vencimento_h_extra" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_vencimento_h_fds" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_vencimento_salario_familia"type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_vencimento_dsr_rem"type="text" required="required" readonly="true"/></br>
 	</div>
 
 	<div class="campos_desconto">
-		<br><input id="campo_calculo_ir" type="text" required="required" /></br>
-		<br><input id="campo_calculo_faltas" type="text" required="required" /></br>
-		<br><input id="campo_desconto_adiantamento" type="text" required="required" /></br>
-		<br><input id="campo_desconto_vale_transporte" type="text" required="required" /></br>
-		<br><input id="campo_calculo_inss" type="text" required="required" /></br>
+		<br><input id="campo_calculo_ir" type="text" required="required" readonly="true" /></br>
+		<br><input id="campo_calculo_faltas" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_desconto_adiantamento" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_desconto_vale_transporte" type="text" required="required" readonly="true"/></br>
+		<br><input id="campo_calculo_inss" type="text" required="required" readonly="true"/></br>
 	</div>
 
 	<br><label id="separator1">___________________________________________________________________________________________________________________</label></br>
@@ -146,17 +146,17 @@
 		<br></br>
 		<div id="total_vencimentos">
 			<label>Total de Vencimentos:</label>
-			<input id="total_vencimentos1" type="text" required="required" />
+			<input id="total_vencimentos1" type="text" required="required" readonly="true"/>
 		</div>
 
 		<div id="total_descontos">
 			<label>Total de Descontos:</label>
-			<input id="total_descontos1" type="text" required="required" />
+			<input id="total_descontos1" type="text" required="required" readonly="true"/>
 		</div>
 
 		<div id="total_liquido">
 			<label>Valor Líquido:</label>
-			<input id="total_liquido1" type="text" required="required" />
+			<input id="total_liquido1" type="text" required="required" readonly="true"/>
 		</div>
 
 	<br><label id="separator1">___________________________________________________________________________________________________________________</label></br>
@@ -164,27 +164,27 @@
 		<br></br>
 		<div id="total_salario_base">
 			<label>Salário Base:</label>
-			<input id="total_salario_base1" type="text" required="required" />
+			<input id="total_salario_base1" type="text" required="required" readonly="true"/>
 		</div>
 
 		<div id="total_inss">
 			<label>Sal. Contr. INSS</label>
-			<input id="total_inss1" type="text" required="required" />
+			<input id="total_inss1" type="text" required="required" readonly="true"/>
 		</div>
 
 		<div id="total_calc_fgts">
 			<label>Base calc.FGTS</label>
-			<input id="total_calc_fgts1" type="text" required="required" />
+			<input id="total_calc_fgts1" type="text" required="required" readonly="true"/>
 		</div>
 
 		<div id="total_mes">
 			<label>FGTS do mês</label>
-			<input id="total_mes1" type="text" required="required" />
+			<input id="total_mes1" type="text" required="required" readonly="true"/>
 		</div>
 
 		<div id="total_irrf">
 			<label>Base calc. IRRF</label>
-			<input id="total_irrf1" type="text" required="required" />
+			<input id="total_irrf1" type="text" required="required" readonly="true"/>
 		</div>
 
 

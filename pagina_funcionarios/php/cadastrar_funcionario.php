@@ -7,9 +7,9 @@ $banco="payroll_database";
 $conexao = mysqli_connect($host, $user, $pass) or die(mysql_error());
 mysqli_select_db($conexao,$banco) or die(mysql_error());
 
-
 $nome=$_POST['nome'];
 $admissao=$_POST['admissao'];
+$data = implode("-", array_reverse(explode("/", $admissao)));
 $telefone=$_POST['telefone'];
 $sexo=$_POST['sexo'];
 $cpf=$_POST['cpf'];
@@ -23,7 +23,7 @@ $insalubridade=$_POST['insalubridade'];
 $periculosidade=$_POST['periculosidade'];
 
 $sql = mysqli_query ($conexao,"INSERT INTO funcionarios (nome, admissao, telefone, sexo, cpf, rg, pis, funcao, setor, salario, vale_transporte, insalubridade, periculosidade)
-	VALUES('$nome', '$admissao', '$telefone', '$sexo', '$cpf', '$rg', '$pis', '$funcao', '$setor', '$salario', '$vale_transporte', '$insalubridade', '$periculosidade')") or die(mysql_error());
+	VALUES('$nome', '$data', '$telefone', '$sexo', '$cpf', '$rg', '$pis', '$funcao', '$setor', '$salario', '$vale_transporte', '$insalubridade', '$periculosidade')") or die(mysql_error());
 
 ?>
 

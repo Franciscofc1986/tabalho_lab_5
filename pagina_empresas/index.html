@@ -17,7 +17,7 @@
 		<a href="#nogo2" id ="item2" class="top_link"><span class="down">Emitente</span></a>
 				<ul class="sub">
 					<li><a href="javascript:void();" onclick="empresas()">Cadastro...</a></li>
-					<li><a href="javascript:void();" onclick="buscar_emitentes()">Editar/Deletar...</a></li>
+					<li><a href="javascript:void();" onclick="buscar_emitentes()">Editar...</a></li>
 				</ul>
 			</li>
 			<li class="top">
@@ -52,59 +52,59 @@
 	</div>
 	<div id="informacao_empresas">
 		<label id="titles">Emitente</label>
-		<p><label>*DICA: Para exibir as informações de residência do emitente, basta informar o CEP do mesmo no campo abaixo.</label></p>
+		<p><label>*DICA: Para exibir as informações de local do emitente, basta informar o CEP do mesmo no campo abaixo.</label></p>
 	<div class="campos">
 	<div id = "nome">
 		<label class="inputs">Nome Fantasia:</label>
-			<input type="text" name="n_fantasia" id="campo_nome_fantasia" required="required" onblur="ver_tam('campo_nome_fantasia','Nome Fantasia')"/>
+			<input type="text" name="n_fantasia" id="campo_nome_fantasia" placeholder="Nome Fantasia da Empresa" required="required" onblur="ver_tam('campo_nome_fantasia','Nome Fantasia')"/>
 	</div>
 	<div id = "codigo">
 		<label class="inputs">Código:</label>
-			<input type="text" name="codigo" id="campo_codigo"/>
+			<input type="text" name="codigo" placeholder="ex.: 001" id="campo_codigo"/>
 	</div>
 	<div id = "razao_social">
 		<label class="inputs">Razão Social:</label>
-			<input type="text" name="r_social" id="campo_razao_social" required="required" onblur="ver_tam('campo_razao_social','Razão Social')"/>
+			<input type="text" name="r_social" id="campo_razao_social" placeholder="Razão social da Empresa" required="required" onblur="ver_tam('campo_razao_social','Razão Social')"/>
 	</div>
 	<div id = "cnpj">
 		<label class="inputs">CNPJ:</label>
-			<input type="text" name="cnpj_txt" id="campo_cnpj" required="required" onblur="ver_num('campo_cnpj','CNPJ')"/>
+			<input type="text" name="cnpj_txt" id="campo_cnpj" placeholder="ex.: 00.000.000/0000-00" required="required" onblur="ver_num('campo_cnpj','CNPJ')"/>
 	</div>
 	<div id = "ie">
 		<label class="inputs">I.E:</label>
-			<input type="text" name="insc_est" id="campo_ie" required="required" onblur="ver_num('campo_ie','inscrição estadual')"/>
+			<input type="text" name="insc_est" id="campo_ie" placeholder="ex.: 000.000.000.000" required="required" onblur="ver_num('campo_ie','inscrição estadual')"/>
 	</div>
 	<div id = "tel">
 		<label class="inputs">Tel.:</label>
-			<input type="text" name="tel" id="campo_telefone" required="required" onblur="ver_num('campo_telefone','Telefone')"/>
+			<input type="text" name="tel" id="campo_telefone" placeholder="ex.: (00) 0000-0000" required="required" onblur="ver_num('campo_telefone','Telefone')"/>
 	</div>
 	<div id = "logradouro">
 		<label class="inputs">Logradouro:</label>
-			<input type="text" name="endereco" id="campo_logradouro" required="required" onblur="ver_tam('campo_logradouro','Logradouro')"/>
+			<input type="text" name="endereco" placeholder="ex.: Rua da Manoel Francisco Escobar" id="campo_logradouro" required="required" onblur="ver_tam('campo_logradouro','Logradouro')"/>
 	</div>
 	<div id = "num">
 		<label class="inputs">Nº:</label>
-			<input type="text" name="numero" id="campo_num" required="required" onblur="ver_num('campo_num','Nº')"/>
+			<input type="text" name="numero" placeholder="ex.: 123a" id="campo_num" required="required" onblur="ver_num('campo_num','Nº')"/>
 	</div>
 	<div id = "bairro">
 		<label class="inputs">Bairro:</label>
-			<input type="text"  name="bairr" id="campo_bairro" required="required" onblur="ver_tam('campo_bairro','Bairro')"/>
+			<input type="text"  name="bairr" id="campo_bairro" placeholder="ex.: Centro" required="required" onblur="ver_tam('campo_bairro','Bairro')"/>
 	</div>
 	<div id = "cidade">
 		<label class="inputs">Cidade:</label>
-			<input type="text" name="cid" id="campo_cidade" required="required" onblur="ver_tam('campo_cidade','Cidade')"/>
+			<input type="text" name="cid" id="campo_cidade" placeholder="Águas de Lindóia" required="required" onblur="ver_tam('campo_cidade','Cidade')"/>
 	</div>
 	<div id = "uf">
 		<label class="inputs">UF:</label>
-			<input type="text" name="unit_fed" id="campo_uf" required="required"/>
+			<input type="text" name="unit_fed" placeholder="Minas Gerais" id="campo_uf" required="required"/>
 	</div>
 	<div id = "cep">
 		<label class="inputs">CEP:</label>
-			<input type="text" name="c_e_p" id="campo_cep" onblur="atualizacep(this.value)" />
+			<input type="text" name="c_e_p" placeholder="ex.: 00.000-000" id="campo_cep" onblur="atualizacep(this.value)" />
 	</div>
 	<div id = "email">
 		<label class="inputs">Email:</label>
-			<input type="email" name="e_mail" id="campo_email" required="required" />
+			<input type="email" name="e_mail" placeholder="ex.: aaaaaa@aaaa.aaa" id="campo_email" required="required" />
 	</div>
 	</div>
 

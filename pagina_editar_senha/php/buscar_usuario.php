@@ -31,9 +31,9 @@ $result = mysqli_query($conexao,$sql);
         $return = "$tabela";
         // Captura os dados da consulta e inseri na tabela HTML
         while ($linha = mysqli_fetch_array($result)) {
-            $return.= "<td id='campo_id' style='display:none'>" . utf8_encode($linha["id"]) . "</td>";
-            $return.= "<td id='campo_login'>" . utf8_encode($linha["login"]) . "</td>";
-            $return.= "<td id='campo_senha'>" . utf8_encode($linha["senha"]) . "</td>";
+            $return.= "<td id='campo_id' style='display:none'>" . ($linha["id"]) . "</td>";
+            $return.= "<td id='campo_login'>" . ($linha["login"]) . "</td>";
+            $return.= "<td id='campo_senha'>" . ($linha["senha"]) . "</td>";
             $return.= "<td>" . ($textbox) . "</td>";
             $return.= "</tr>";
            

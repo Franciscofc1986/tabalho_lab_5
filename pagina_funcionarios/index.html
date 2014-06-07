@@ -18,7 +18,7 @@
 		<a href="#nogo2" id ="item2" class="top_link"><span class="down">Emitente</span></a>
 				<ul class="sub">
 					<li><a href="javascript:void();" onclick="empresas()">Cadastro...</a></li>
-					<li><a href="javascript:void();" onclick="buscar_emitentes()">Editar/Deletar...</a></li>
+					<li><a href="javascript:void();" onclick="buscar_emitentes()">Editar...</a></li>
 				</ul>
 			</li>
 			<li class="top">
@@ -56,15 +56,15 @@
 	<div class="campos">
 	<div id = "nome">
 		<label class="inputs">Nome:</label>
-			<input type="text" id="campo_nome" required="required" onblur="ver_tam('campo_nome','Nome')"/>
+			<input type="text" id="campo_nome" placeholder="Nome do Funcionário" required="required" onblur="ver_tam('campo_nome','Nome')"/>
 	</div>
 	<div id = "admissao">
 		<label class="inputs">Admissão:</label>
-			<input type="text" id="campo_admissao" required="required" onblur="validaDat(this,this.value)"/>
+			<input type="text" id="campo_admissao" placeholder="dd/mm/aaaa" required="required" onblur="validaDat(this,this.value)"/>
 	</div>		
 	<div id = "tel">
 		<label class="inputs">Tel.:</label>
-			<input type="text" id="campo_telefone" required="required" onblur="ver_num('campo_telefone','telefone')"/>
+			<input type="text" id="campo_telefone" placeholder="(00)0000-0000" required="required" onblur="ver_num('campo_telefone','telefone')"/>
 	</div>
 	<div id = "sexo">
 		<label class="inputs">Sexo: </label>
@@ -75,39 +75,39 @@
 	</div>
 	<div id = "cpf">
 		<label class="inputs">CPF:</label>
-			<input type="text" id="campo_cpf" required="required" onblur="ver_num('campo_cpf','CPF')"/>
+			<input type="text" id="campo_cpf" placeholder="ex.: 000.000.000-00" required="required" onblur="ver_num('campo_cpf','CPF')"/>
 	</div>
 	<div id = "rg">
 		<label class="inputs">RG:</label>
-			<input type="text" id="campo_rg" required="required" onblur="ver_num('campo_rg','RG')"/>
+			<input type="text" id="campo_rg" placeholder="ex.: 00.000.000" required="required" onblur="ver_num('campo_rg','RG')"/>
 	</div>
 	<div id = "pis">
 		<label class="inputs">PIS:</label>
-			<input type="text" id="campo_pis" required="required" onblur="ver_num('campo_pis','PIS')"/>
+			<input type="text" id="campo_pis" placeholder="ex.: 0.000.000.000-0" required="required" onblur="ver_num('campo_pis','PIS')"/>
 	</div>
 	<div id = "funcao">
 		<label class="inputs">Função:</label>
-			<input type="text" id="campo_funcao" required="required" onblur="ver_tam('campo_funcao','Função')"/>
+			<input type="text" id="campo_funcao" placeholder="ex.: Aux. Administrativo" required="required" onblur="ver_tam('campo_funcao','Função')"/>
 	</div>
 	<div id = "setor">
 		<label class="inputs">Setor:</label>
-			<input type="text" id="campo_setor" required="required" onblur="ver_tam('campo_setor','Setor')"/>
+			<input type="text" id="campo_setor" placeholder="ex.: Tesouraria" required="required" onblur="ver_tam('campo_setor','Setor')"/>
 	</div>
 	<div id = "salario">
 		<label class="inputs">Salário:</label>
-			<input type="text" id="campo_salario" required="required" onblur="ver_num('campo_salario','Salário')"/>
+			<input type="text" id="campo_salario" placeholder="ex.: 1000" required="required" onblur="ver_num('campo_salario','Salário')"/>
 	</div>
 	<div id = "vale">
 		<label class="inputs">Vale-Transporte:</label>
-			<input type="text" id="campo_vale_transporte" required="required" onblur="ver_num('campo_vale_transporte','Vale-Transporte')"/>
+			<input type="text" id="campo_vale_transporte" placeholder="Porcentagem" required="required" onblur="ver_num('campo_vale_transporte','Vale-Transporte')"/>
 	</div>
 	<div id = "insalubridade">
 		<label class="inputs">Insalubridade:</label>
-			<input type="text" id="campo_insalubridade" required="required" onblur="ver_num('campo_insalubridade','Insalubridade')"/>
+			<input type="text" id="campo_insalubridade" placeholder="Porcentagem" required="required" onblur="ver_num('campo_insalubridade','Insalubridade')"/>
 	</div>
 	<div id = "periculosidade">
 		<label class="inputs">Periculosidade:</label>
-			<input type="text" id="campo_periculosidade" required="required" onblur="ver_num('campo_periculosidade','Periculosidade')"/>
+			<input type="text" id="campo_periculosidade" placeholder="Porcentagem" required="required" onblur="ver_num('campo_periculosidade','Periculosidade')"/>
 	</div>
 	</div>
 	

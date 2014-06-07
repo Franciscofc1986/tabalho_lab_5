@@ -47,18 +47,18 @@ $result = mysqli_query($conexao,$sql);
         $return = "$tabela";
         // Captura os dados da consulta e inseri na tabela HTML
         while ($linha = mysqli_fetch_array($result)) {
-            $return.= "<td id='campo_id' style='display:none'>" . utf8_encode($linha["id"]) . "</td>";
-            $return.= "<td id='campo_competencia'>" . utf8_encode($linha["competencia"]) . "</td>";
-            $return.= "<td id='campo_funcionario'>" . utf8_encode($linha["funcionario"]) . "</td>";
-            $return.= "<td id='campo_dias_uteis'>" . utf8_encode($linha["dias_uteis"]) . "</td>";
-            $return.= "<td id='campo_dias_fds'>" . utf8_encode($linha["dias_fds"]) . "</td>";
-            $return.= "<td id='campo_hora_normal'>" . utf8_encode($linha["hora_normal"]) . "</td>";
-            $return.= "<td id='campo_hora_fds'>" . utf8_encode($linha["hora_fds"]) . "</td>";
-            $return.= "<td id='campo_falta_normal'>" . utf8_encode($linha["falta_normal"]) . "</td>";
-            $return.= "<td id='campo_falta_fds'>" . utf8_encode($linha["falta_fds"]) . "</td>";
-            $return.= "<td id='campo_add_noturno'>" . utf8_encode($linha["add_noturno"]) . "</td>";
-            $return.= "<td id='campo_dependentes'>" . utf8_encode($linha["dependentes"]) . "</td>";
-            $return.= "<td id='campo_adiantamento'>" . utf8_encode($linha["adiantamento"]) . "</td>";
+            $return.= "<td id='campo_id' style='display:none'>" . ($linha["id"]) . "</td>";
+            $return.= "<td id='campo_competencia'>" . ($linha["competencia"]) . "</td>";
+            $return.= "<td id='campo_funcionario'>" . ($linha["funcionario"]) . "</td>";
+            $return.= "<td id='campo_dias_uteis'>" . ($linha["dias_uteis"]) . "</td>";
+            $return.= "<td id='campo_dias_fds'>" . ($linha["dias_fds"]) . "</td>";
+            $return.= "<td id='campo_hora_normal'>" . ($linha["hora_normal"]) . "</td>";
+            $return.= "<td id='campo_hora_fds'>" . ($linha["hora_fds"]) . "</td>";
+            $return.= "<td id='campo_falta_normal'>" . ($linha["falta_normal"]) . "</td>";
+            $return.= "<td id='campo_falta_fds'>" . ($linha["falta_fds"]) . "</td>";
+            $return.= "<td id='campo_add_noturno'>" . ($linha["add_noturno"]) . "</td>";
+            $return.= "<td id='campo_dependentes'>" . ($linha["dependentes"]) . "</td>";
+            $return.= "<td id='campo_adiantamento'>" . ($linha["adiantamento"]) . "</td>";
             $return.= "<td>" . ($textbox) . "</td>";
             $return.= "</tr>";
            
