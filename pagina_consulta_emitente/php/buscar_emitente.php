@@ -2,9 +2,9 @@
 if (isset($_GET["txtnome"])) {
     $nome = $_GET["txtnome"];
 $host="localhost";
-$user="root";
-$pass="";
-$banco="payroll_database";
+$user="u889596634_root";
+$pass="92153287";
+$banco="u889596634_payro";
 
 $conexao = mysqli_connect($host, $user, $pass) or die(mysql_error());
 mysqli_select_db($conexao,$banco) or die(mysql_error());
